@@ -1,5 +1,5 @@
 # 💫 About Me:
-👋 Hi there, I'm NightServant!<br><br>I am a 3rd Year Computer Science Student studying at Tarlac State University. I am passionate in software<br>development and emerging technologies. My main interest lies in Web Development, Java Programming and Algorithms.<br><br>🚀 Projects & Goals<br>- Building real-world applications to improve my coding and design skills.<br>- Contributing to open-source projects and collaborating with developers around the world.<br>- Preparing for internships and future roles in software engineering.
+👋 Hi there, I'm NightServant!<br><br>I am a Graduating Computer Science Student studying at Tarlac State University. I am passionate in software<br>development and emerging technologies. My main interest lies in Web Development, Java Programming and Algorithms.<br><br>🚀 Projects & Goals<br>- Building real-world applications to improve my coding and design skills.<br>- Contributing to open-source projects and collaborating with developers around the world.<br>- Preparing for internships and future roles in software engineering.
 
 
 ## 🌐 Socials:
