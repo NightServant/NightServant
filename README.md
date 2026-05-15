@@ -1,106 +1,52 @@
 <div align="center">
-  
-  # 👋 Hi, I'm Elijah Gabe Cervantes (NightServant)
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=38B2AC&center=true&vCenter=true&width=700&lines=👋+Hi,+I'm+Elijah+Gabe+Cervantes;BS+Computer+Science+Graduate;Aspiring+Frontend+Developer" alt="Typing SVG" />
 
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38B2AC&center=true&vCenter=true&width=600&lines=Aspiring+Frontend+Developer;CS+Graduate+from+Tarlac+State+University;Passionate+about+Web+Technologies" alt="Typing SVG" />
-  </a>
-
-  <p align="center">
-    <a href="https://linkedin.com/in/elijah-gabe-cervantes"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-    <a href="https://facebook.com/egabecervantes"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white" alt="Facebook"></a>
-    <a href="https://instagram.com/gabe0307_"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
-    <a href="https://youtube.com/@choicervantes499"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube"></a>
-    <a href="mailto:egabecervantes@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <p>
+    <a href="https://linkedin.com/in/elijah-gabe-cervantes"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+    <a href="mailto:egabecervantes@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+    <a href="https://github.com/NightServant"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   </p>
-
 </div>
 
 ---
 
-### 👨‍💻 About Me
+### 🎓 Professional Summary
+I am a **Bachelor of Science in Computer Science** graduate from **Tarlac State University** (Class of 2026). As an **Aspiring Frontend Developer**, I focus on building high-performance, aesthetically pleasing web applications using modern ecosystem tools. I bridge the gap between complex backend logic and intuitive user experiences.
 
-I am a recent **Bachelor of Science in Computer Science** graduate from **Tarlac State University**. I am highly passionate about software development, emerging technologies, and crafting elegant user interfaces. As an **aspiring frontend developer**, my main interest lies in building responsive, accessible, and dynamic web applications while transforming complex problems into intuitive digital experiences.
-
-> **🎯 Current Focus:** Deepening my knowledge in the React/Vite ecosystem and exploring full-stack capabilities with Laravel and Livewire.  
-> **🌱 Currently Building:** Real-world applications to elevate my UI/UX design and frontend architecture skills.  
-> **💼 Open To:** Full-time roles, internships, and collaborative open-source projects in frontend development.  
+- 🔭 **Current Focus:** Mastery of the TALL stack (Tailwind, Alpine, Laravel, Livewire) and React ecosystem.
+- ⚡ **Goal:** Engineering scalable frontend architectures and contributing to impactful open-source projects.
+- 🏛️ **Alma Mater:** Tarlac State University.
 
 ---
 
-### 🛠️ Technical Arsenal
+### 🛠️ Technical Stack
 
-<table align="center" width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌐 Frontend & UI</h3>
-      <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-      <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
-      <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
-      <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-      <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-      <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white">
-      <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white">
-      <img src="https://img.shields.io/badge/Mary_UI-FF69B4?style=for-the-badge&logoColor=white">
-      <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white">
-    </td>
-    <td width="50%" valign="top">
-      <h3>⚙️ Backend & Languages</h3>
-      <img src="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white">
-      <img src="https://img.shields.io/badge/livewire-%234e56a6.svg?style=for-the-badge&logo=livewire&logoColor=white">
-      <img src="https://img.shields.io/badge/Inertia.js-9553E9?style=for-the-badge&logo=Inertia&logoColor=white">
-      <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white">
-      <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-      <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
-      <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white">
-      <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🧰 Tools & Platforms</h3>
-      <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
-      <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
-      <img src="https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white">
-      <img src="https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black">
-      <img src="https://img.shields.io/badge/javafx-%23FF0000.svg?style=for-the-badge&logo=javafx&logoColor=white">
-    </td>
-    <td width="50%" valign="top">
-      <h3>🎨 Design & AI</h3>
-      <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
-      <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white">
-      <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white">
-      <img src="https://img.shields.io/badge/Codex-0058A0?style=for-the-badge&logo=openai&logoColor=white">
-    </td>
-  </tr>
-</table>
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend Frameworks** | ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Inertia](https://img.shields.io/badge/Inertia-9553E9?style=flat-square&logo=inertia&logoColor=white) ![Typescript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) |
+| **Styling & UI** | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) ![ShadCN](https://img.shields.io/badge/ShadCN_UI-000000?style=flat-square&logo=shadcnui&logoColor=white) ![Mary UI](https://img.shields.io/badge/Mary_UI-FF69B4?style=flat-square) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white) |
+| **Backend & Fullstack** | ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) ![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=flat-square&logo=livewire&logoColor=white) ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
+| **Tools & AI Workflow** | ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white) ![Codex](https://img.shields.io/badge/Codex-0058A0?style=flat-square) ![Git](https://img.shields.io/badge/Git-F05033?style=flat-square&logo=git&logoColor=white) ![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=flat-square&logo=xampp&logoColor=white) |
 
 ---
 
 ### 📊 GitHub Analytics
+<div align="center">
+  <img src="https://gh-stats.com/api?username=NightServant&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" width="48%" />
+  <img src="https://github-contribution-card.vercel.app/api?username=NightServant&theme=tokyonight&hide_border=true" width="48%" />
+</div>
 
-<table align="center" width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=NightServant&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0D1117" width="100%" alt="GitHub Stats">
-    </td>
-    <td width="50%" align="center">
-      <img src="https://nirzak-streak-stats.vercel.app/?user=NightServant&theme=tokyonight&hide_border=true&background=0D1117" width="100%" alt="GitHub Streak">
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NightServant&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&bg_color=0D1117" width="100%" alt="Top Languages">
-    </td>
-    <td width="50%" align="center">
-      <img src="https://github-contributor-stats.vercel.app/api?username=NightServant&limit=5&theme=tokyonight&combine_all_yearly_contributions=true&bg_color=0D1117" width="100%" alt="Contributor Stats">
-    </td>
-  </tr>
-</table>
-
-<br>
+<br />
 
 <div align="center">
-  <i>"Code is like humor. When you have to explain it, it’s bad."</i><br><br>
-  <a href="https://visitcount.itsvg.in"><img src="https://visitcount.itsvg.in/api?id=NightServant&icon=0&color=0" alt="Profile Views"></a>
+  <img src="https://gh-stats.com/api/top-langs/?username=NightServant&theme=tokyonight&layout=compact&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=NightServant&theme=tokyonight&hide_border=true" width="48%" />
+</div>
+
+---
+
+<div align="center">
+  <i>"Code is like humor. When you have to explain it, it’s bad."</i>
+  <br />
+  <img src="https://visitcount.itsvg.in/api?id=NightServant&icon=5&color=0" alt="Views" />
 </div>
