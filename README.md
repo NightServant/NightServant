@@ -53,7 +53,7 @@ Recent **Bachelor of Science in Computer Science** graduate from **Tarlac State 
 </table>
 
 <div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="60%" alt="Daily Quote" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="100%" alt="Daily Quote" />
 </div>
 
 ---
