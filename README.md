@@ -252,9 +252,7 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 
 ## 🏆 GitHub Trophies
 
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=NightServant&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8" width="100%" alt="GitHub Trophies" />
-</div>
+<div align="center"> <!-- Default github-profile-trophy.vercel.app was returning 402 (over usage limit) — swapped to a community mirror from the project's own README. Backups if this one ever goes down: github-profile-trophy-winning.vercel.app, github-profile-trophy-kannan.vercel.app --> <img src="https://github-profile-trophy-liard-delta.vercel.app/?username=NightServant&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8" width="100%" alt="GitHub Trophies" /> </div>
 
 ---
 
