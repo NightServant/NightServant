@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- Animated Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer&descAlignY=58&descSize=16&descColor=a0aec0&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0&animation=fadeIn" width="100%" />
 
 <!-- Typing Animation -->
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&center=true&vCenter=true&width=600&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Typing SVG" />
 
 <br/>
 
@@ -27,17 +27,19 @@
 
 > 🎓 **Bachelor of Science in Computer Science** — Tarlac State University
 >
-> 💼 Aspiring **Frontend Developer & UI/UX Specialist** based in the Philippines 🇵🇭
+> 💼 **Frontend Developer** based in the Philippines 🇵🇭, working toward becoming a **Full-Stack Developer**
 >
 > ⚡ I specialize in engineering **high-performance frontend architectures** and **seamless user experiences** — turning designs into living, breathing interfaces.
 >
-> 🌉 I bridge the gap between complex requirements and elegant, maintainable code.
+> 🔄 I'm actively extending that foundation into backend engineering — APIs, databases, and server-side logic — so I can own a feature end-to-end, not just the UI layer.
+>
+> 🌉 I bridge the gap between complex requirements and elegant, maintainable code, on both sides of the stack.
 
 ---
 
 ## 🎯 Developer Objectives
 
-My roadmap to becoming a **Frontend Master** — three pillars I'm actively working toward:
+My roadmap: **frontend mastery today, full-stack ownership next.** Three pillars I'm actively working toward:
 
 <table>
 <tr>
@@ -46,7 +48,7 @@ My roadmap to becoming a **Frontend Master** — three pillars I'm actively work
 ### 🏗️ Objective 1
 **Master Advanced React & Next.js Architecture**
 
-Build production-grade SPAs and SSR apps with optimized rendering strategies, state management (Zustand/Redux), and performance-first patterns like code splitting and lazy loading.
+Build production-grade SPAs and SSR apps with optimized rendering strategies, state management, and performance-first patterns like code splitting and lazy loading — see **AeroWeather** below.
 
 </td>
 <td width="33%" align="center">
@@ -59,10 +61,85 @@ Bridge the gap between design and engineering — master Figma-to-code workflows
 </td>
 <td width="33%" align="center">
 
-### 🚀 Objective 3
-**Contribute to Open Source & Build a Portfolio**
+### 🔄 Objective 3
+**Transition Into Full-Stack Engineering**
 
-Land contributions in recognized open-source frontend projects, publish reusable component libraries, and launch real-world SaaS products that demonstrate full-stack frontend ownership.
+Extend frontend expertise into backend territory — APIs, relational databases, auth, and server-side logic (PHP/Laravel, MySQL) — to design, build, and ship complete applications end-to-end, as in **Smart HRMS** and **Online Resume Builder**.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Featured Projects — Frontend Foundation → Full-Stack Growth
+
+Projects below are ordered to trace the actual arc: programming fundamentals, then frontend depth, then the first steps into owning the backend too.
+
+### 🧱 Programming Foundations
+
+<table>
+<tr>
+<td width="50%">
+
+**[Java Calculator](https://github.com/NightServant/Java-Calculator)**
+GUI calculator built with Java Swing for a Computer Programming / Capstone requirement — the four basic operations plus percentage, with a custom launch screen and credits window. Early practice with event-driven UI and OOP structure.
+
+`Java` `Java Swing` `IntelliJ IDEA`
+
+</td>
+<td width="50%">
+
+**[I Love Music 1.0](https://github.com/NightServant/I-Love-Music-1.0)**
+Java Swing desktop music player — a Spotify-like app built for a Computer Programming Lab case study. Covers frame/panel composition, custom UI components, and file I/O for reading local media.
+
+`Java` `Java Swing` `File I/O`
+
+</td>
+</tr>
+</table>
+
+### 🎨 Frontend Depth
+
+<table>
+<tr>
+<td width="50%">
+
+**[AeroWeather](https://github.com/NightServant/aero_weather)**
+A modern weather dashboard built solo with **Next.js 16 (App Router, Turbopack)** and **React 19** — a glassmorphic, single-scroll interface with live forecast, air quality, and geocoding data from Open-Meteo, weather-driven gradient theming, an interactive Leaflet map, and unit-tested utility logic (Vitest). No backend by design — all state is client-side — making it a focused showcase of advanced frontend architecture.
+
+`Next.js` `React` `TypeScript` `Tailwind CSS` `Vitest` `Leaflet`
+
+</td>
+<td width="50%">
+
+**[TSU Online Library](https://github.com/Ensues/online-library)**
+A hackathon redesign of the college library's website, built as part of a 3-person team. Focused entirely on UI/UX — a modernized book/thesis gallery, catalog filtering, and guest/login access — using plain HTML, CSS, and JavaScript under a tight timebox.
+
+`HTML5` `CSS3` `JavaScript` · team project
+
+</td>
+</tr>
+</table>
+
+### 🔄 Stepping Into Full-Stack
+
+<table>
+<tr>
+<td width="50%">
+
+**[Online Resume Builder](https://github.com/NightServant/Online-Resume-Builder)**
+An ATS-friendly resume builder built with a 5-person team for a Web Programming course — the first project where I worked past the UI into the backend: **PHP** handles registration, login, session/account management, and resume-data persistence against a **MySQL** database, alongside the HTML/CSS/JS frontend.
+
+`HTML5` `CSS3` `JavaScript` `PHP` `MySQL` · team project
+
+</td>
+<td width="50%">
+
+**[Smart HRMS](https://github.com/NightServant/Smart-HRMS)**
+The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.js v2)** HR platform with role-aware access for employees, evaluators, HR, and PMT officers. Backed by **MySQL** and four Python-based AI modules (rule-based leave/IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a content-based training recommender), and shipped as a desktop app via Electron. This is where frontend skill meets backend architecture, data modeling, and system design.
+
+`Laravel` `React` `Inertia.js` `MySQL` `Python` `Electron`
 
 </td>
 </tr>
@@ -185,7 +262,7 @@ Land contributions in recognized open-source frontend projects, publish reusable
 
 <div align="center">
 
-<p>I'm open to <strong>internships</strong>, <strong>freelance projects</strong>, <strong>open-source collaborations</strong>, and <strong>full-time frontend roles</strong>.</p>
+<p>I'm open to <strong>internships</strong>, <strong>freelance projects</strong>, <strong>open-source collaborations</strong>, and <strong>full-time frontend roles</strong> — with an eye toward <strong>full-stack opportunities</strong> as I grow into the backend.</p>
 
 <a href="https://linkedin.com/in/elijah-gabe-cervantes">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
