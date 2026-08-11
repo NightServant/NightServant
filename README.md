@@ -243,7 +243,7 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 
 <p>I'm open to <strong>internships</strong>, <strong>freelance projects</strong>, <strong>open-source collaborations</strong>, and <strong>full-time frontend roles</strong> — with an eye toward <strong>full-stack opportunities</strong> as I grow into the backend.</p>
 
-<a href="https://linkedin.com/in/elijah-gabe-cervantes">
+<a href="https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 &nbsp;
