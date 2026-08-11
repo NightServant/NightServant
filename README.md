@@ -6,19 +6,6 @@
 <!-- Typing Animation -->
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Typing SVG" />
 
-<br/>
-
-<a href="https://linkedin.com/in/elijah-gabe-cervantes">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" />
-</a>
-<a href="mailto:egabecervantes@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white" />
-</a>
-<a href="https://facebook.com/egabecervantes">
-  <img src="https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white" />
-</a>
-<img src="https://komarev.com/ghpvc/?username=NightServant&color=38B2AC&style=flat-square&label=profile+views" />
-
 </div>
 
 ---
