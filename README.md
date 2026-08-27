@@ -1,10 +1,16 @@
 <div align="center">
 
 <!-- Animated Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0&animation=fadeIn" width="100%" alt="Elijah Gabe Cervantes — Frontend Developer banner" />
 
-<!-- Typing Animation -->
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Typing SVG" />
+<!-- Typing Animation (theme-aware: darker teal for GitHub light mode, bright teal for dark mode) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&background=00000000&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=1F7A73&background=00000000&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Engineering high-performance frontends, crafting seamless user experiences, expanding into full-stack development, BSCS graduate from Tarlac State University, modern web specialist and UI architect" />
+</picture>
+
+<!-- Visitor Counter -->
+![Profile views](https://komarev.com/ghpvc/?username=NightServant&label=Profile%20views&color=38B2AC&style=flat-square)
 
 </div>
 
@@ -63,7 +69,9 @@ Extend frontend expertise into backend territory — APIs, relational databases,
 
 Projects below are ordered to trace the actual arc: programming fundamentals, then frontend depth, then the first steps into owning the backend too.
 
-### 🧱 Programming Foundations
+<details>
+<summary><h3>🧱 Programming Foundations (earlier coursework)</h3></summary>
+<br>
 
 <table>
 <tr>
@@ -85,6 +93,8 @@ Java Swing desktop music player — a Spotify-like app built for a Computer Prog
 </td>
 </tr>
 </table>
+
+</details>
 
 ### 🎨 Frontend Depth
 
@@ -176,7 +186,11 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 
 ---
 
-### 🧰 IDEs & Developer Tools
+<details>
+<summary><h3>🧰 IDEs, Tools & AI-Assisted Development</h3></summary>
+<br>
+
+**IDEs & Developer Tools**
 
 <p align="left">
   <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
@@ -186,14 +200,14 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
    <img src="https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white" />
 </p>
 
----
-
-### 🤖 AI-Assisted Development
+**AI-Assisted Development**
 
 <p align="left">
   <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white" />
   <img src="https://img.shields.io/badge/OpenAI_Codex-412991?style=for-the-badge&logo=openai&logoColor=white" />
 </p>
+
+</details>
 
 ---
 
@@ -202,31 +216,15 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 <div align="center">
 
 <img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=NightServant&theme=tokyo-night&bg_color=0d1117&color=38B2AC&line=38B2AC&point=ffffff&area=true&area_color=38B2AC&hide_border=true&custom_title=📈%20Contribution%20Graph"
-  width="100%"
-  alt="Contribution Graph"
-/>
-
-<br/><br/>
-
-<img
-  src="https://github-readme-stats-eight-theta.vercel.app/api?username=NightServant&theme=tokyonight&show_icons=true&hide_border=true&count_private=true&bg_color=0d1117&title_color=38B2AC&icon_color=38B2AC&text_color=a0aec0&ring_color=38B2AC"
+  src="https://raw.githubusercontent.com/NightServant/NightServant/main/profile-summary-card-output/tokyonight/3-stats.svg"
   width="48%"
-  alt="GitHub Stats"
+  alt="NightServant's GitHub stats"
 />
 &nbsp;
 <img
-  src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=NightServant&theme=tokyonight&layout=compact&hide_border=true&langs_count=6&bg_color=0d1117&title_color=38B2AC&text_color=a0aec0"
+  src="https://raw.githubusercontent.com/NightServant/NightServant/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg"
   width="48%"
-  alt="Top Languages"
-/>
-
-<br/><br/>
-
-<img
-  src="https://streak-stats.demolab.com?user=NightServant&theme=tokyonight&hide_border=true&background=0d1117&ring=38B2AC&fire=38B2AC&currStreakLabel=38B2AC&sideLabels=a0aec0&dates=a0aec0&stroke=38B2AC"
-  width="60%"
-  alt="GitHub Streak"
+  alt="Most-used languages across NightServant's repositories"
 />
 
 <br/><br/>
@@ -257,6 +255,6 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" width="100%" alt="Profile footer banner" />
 
 </div>
