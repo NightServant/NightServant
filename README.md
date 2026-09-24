@@ -3,8 +3,10 @@
 <!-- Animated Banner -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0&animation=fadeIn" width="100%" alt="Elijah Gabe Cervantes — Frontend Developer banner" />
 
-<!-- Typing Animation (theme-aware: darker teal for GitHub light mode, bright teal for dark mode) -->
+<!-- Typing Animation: phones get a smaller-canvas version in a teal readable on both themes;
+     desktop gets darker teal on light / bright teal on dark -->
 <picture>
+  <source media="(max-width: 700px)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=16&duration=3000&pause=1000&color=259089&background=00000000&center=true&vCenter=true&width=400&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" />
   <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&background=00000000&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" />
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=1F7A73&background=00000000&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Engineering high-performance frontends, crafting seamless user experiences, expanding into full-stack development, BSCS graduate from Tarlac State University, modern web specialist and UI architect" />
 </picture>
@@ -34,34 +36,17 @@
 
 My roadmap: **frontend mastery today, full-stack ownership next.** Three pillars I'm actively working toward:
 
-<table>
-<tr>
-<td width="33%" align="center">
-
-### 🏗️ Objective 1
-**Master Advanced React & Next.js Architecture**
+#### 🏗️ Objective 1 — Master Advanced React & Next.js Architecture
 
 Build production-grade SPAs and SSR apps with optimized rendering strategies, state management, and performance-first patterns like code splitting and lazy loading — see **AeroWeather** below.
 
-</td>
-<td width="33%" align="center">
-
-### 🎨 Objective 2
-**Achieve UI/UX Design Fluency**
+#### 🎨 Objective 2 — Achieve UI/UX Design Fluency
 
 Bridge the gap between design and engineering — master Figma-to-code workflows, design systems, accessibility (WCAG 2.1 AA), and micro-interaction design that elevates user delight.
 
-</td>
-<td width="33%" align="center">
-
-### 🔄 Objective 3
-**Transition Into Full-Stack Engineering**
+#### 🔄 Objective 3 — Transition Into Full-Stack Engineering
 
 Extend frontend expertise into backend territory — APIs, relational databases, auth, and server-side logic (PHP/Laravel, MySQL) — to design, build, and ship complete applications end-to-end, as in **Smart HRMS** and **Online Resume Builder**.
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -73,74 +58,47 @@ Projects below are ordered to trace the actual arc: programming fundamentals, th
 <summary><h3>🧱 Programming Foundations (earlier coursework)</h3></summary>
 <br>
 
-<table>
-<tr>
-<td width="50%">
+#### [Java Calculator](https://github.com/NightServant/Java-Calculator)
 
-**[Java Calculator](https://github.com/NightServant/Java-Calculator)**
 GUI calculator built with Java Swing for a Computer Programming / Capstone requirement — the four basic operations plus percentage, with a custom launch screen and credits window. Early practice with event-driven UI and OOP structure.
 
 `Java` `Java Swing` `IntelliJ IDEA`
 
-</td>
-<td width="50%">
+#### [I Love Music 1.0](https://github.com/NightServant/I-Love-Music-1.0)
 
-**[I Love Music 1.0](https://github.com/NightServant/I-Love-Music-1.0)**
 Java Swing desktop music player — a Spotify-like app built for a Computer Programming Lab case study. Covers frame/panel composition, custom UI components, and file I/O for reading local media.
 
 `Java` `Java Swing` `File I/O`
-
-</td>
-</tr>
-</table>
 
 </details>
 
 ### 🎨 Frontend Depth
 
-<table>
-<tr>
-<td width="50%">
+#### [AeroWeather](https://github.com/NightServant/aero_weather)
 
-**[AeroWeather](https://github.com/NightServant/aero_weather)**
 A modern weather dashboard built solo with **Next.js 16 (App Router, Turbopack)** and **React 19** — a glassmorphic, single-scroll interface with live forecast, air quality, and geocoding data from Open-Meteo, weather-driven gradient theming, an interactive Leaflet map, and unit-tested utility logic (Vitest). No backend by design — all state is client-side — making it a focused showcase of advanced frontend architecture.
 
 `Next.js` `React` `TypeScript` `Tailwind CSS` `Vitest` `Leaflet`
 
-</td>
-<td width="50%">
+#### [TSU Online Library](https://github.com/Ensues/online-library)
 
-**[TSU Online Library](https://github.com/Ensues/online-library)**
 A hackathon redesign of the college library's website, built as part of a 3-person team. Focused entirely on UI/UX — a modernized book/thesis gallery, catalog filtering, and guest/login access — using plain HTML, CSS, and JavaScript under a tight timebox.
 
 `HTML5` `CSS3` `JavaScript` · team project
 
-</td>
-</tr>
-</table>
-
 ### 🔄 Stepping Into Full-Stack
 
-<table>
-<tr>
-<td width="50%">
+#### [Online Resume Builder](https://github.com/NightServant/Online-Resume-Builder)
 
-**[Online Resume Builder](https://github.com/NightServant/Online-Resume-Builder)**
 An ATS-friendly resume builder built with a 5-person team for a Web Programming course — the first project where I worked past the UI into the backend: **PHP** handles registration, login, session/account management, and resume-data persistence against a **MySQL** database, alongside the HTML/CSS/JS frontend.
 
 `HTML5` `CSS3` `JavaScript` `PHP` `MySQL` · team project
 
-</td>
-<td width="50%">
+#### [Smart HRMS](https://github.com/NightServant/Smart-HRMS)
 
-**[Smart HRMS](https://github.com/NightServant/Smart-HRMS)**
 The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.js v2)** HR platform with role-aware access for employees, evaluators, HR, and PMT officers. Backed by **MySQL** and four Python-based AI modules (rule-based leave/IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a content-based training recommender), and shipped as a desktop app via Electron. This is where frontend skill meets backend architecture, data modeling, and system design.
 
 `Laravel` `React` `Inertia.js` `MySQL` `Python` `Electron`
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -215,15 +173,18 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 
 <div align="center">
 
-<!-- Rendered daily from public GitHub data by .github/workflows/dashboard.yml -->
+<!-- Rendered daily from public GitHub data by .github/workflows/dashboard.yml.
+     Phones get a single-column layout that themes itself; the width source must not mention
+     prefers-color-scheme, or GitHub's theme switcher overwrites its media query. -->
 <picture>
+  <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-dark.svg" />
   <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-light.svg" width="100%" alt="GitHub analytics dashboard for NightServant, updated daily: followers and following, contributions and current and longest streak, commits, pull requests, issues, stars earned, weekly contribution activity for the past year, top languages, top repositories, and activity mix" />
 </picture>
 
 <br/><br/>
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="70%" alt="Dev Quote" />
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
 
 </div>
 

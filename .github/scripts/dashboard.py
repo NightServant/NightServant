@@ -1,7 +1,10 @@
-"""Render the profile analytics dashboard as light/dark SVGs from public GitHub data.
+"""Render the profile analytics dashboard as SVGs from public GitHub data.
 
 Layout follows the github-dashboard skill (KPI strip, 2fr/1fr grid, provenance footer),
-drawn as SVG because GitHub READMEs strip CSS/JS. Usage:
+drawn as SVG because GitHub READMEs strip CSS/JS. Outputs:
+  dashboard-light.svg / dashboard-dark.svg  desktop, picked by GitHub's theme switcher
+  dashboard-mobile.svg                      single column; themes itself via prefers-color-scheme
+Usage:
   GITHUB_TOKEN=... python dashboard.py <login> <out_dir>
   python dashboard.py --check
 """
@@ -49,7 +52,7 @@ THEMES = {
                  amber_bg="#3a321c", amber_fg="#e0af68"),
 }
 
-W, PAD, GAP = 1000, 24, 16
+GAP = 16
 FONT = "Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
 
 
@@ -118,36 +121,53 @@ def fmt(n):
     return f"{n:,}"
 
 
+def clip(s, n):
+    return s if len(s) <= n else s[:n - 1] + "…"
+
+
 def text(x, y, s, size=13, fill="ink", weight=400, anchor="start", extra=""):
-    return (f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{{{fill}}}" '
+    return (f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="{weight}" fill="{{{fill}}}" '
             f'text-anchor="{anchor}" {extra}>{escape(str(s))}</text>')
 
 
 def card(x, y, w, h):
-    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="{{surface}}" stroke="{{border}}"/>'
+    return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h}" rx="12" fill="{{surface}}" stroke="{{border}}"/>'
 
 
 def pill(x, y, label, kind="pill"):
     w = 7 * len(label) + 16
-    return (f'<rect x="{x}" y="{y}" width="{w}" height="20" rx="10" fill="{{{kind}_bg}}"/>'
+    return (f'<rect x="{x:.1f}" y="{y:.1f}" width="{w}" height="20" rx="10" fill="{{{kind}_bg}}"/>'
             + text(x + w / 2, y + 14, label, 11, f"{kind}_fg", 500, "middle"))
 
 
-def render(s, now):
-    out = []
-    add = out.append
-    inner = W - 2 * PAD
+def card_title(out, x, y, w, title, note=""):
+    out.append(text(x + 20, y + 30, title, 14, "ink", 600))
+    if note:
+        out.append(text(x + w - 20, y + 30, note, 12, "text2", anchor="end"))
 
-    # Header
-    add('<g data-od-id="repo-header">')
-    add(text(PAD, 44, f"{s['name']} · GitHub analytics", 20, "ink", 600))
-    add(text(PAD, 66, f"@{s['login']} · {s['repo_count']} public repositories · "
-                      f"{fmt(s['followers'])} followers · {fmt(s['following'])} following", 13, "text2"))
-    upd = f"Updated {now:%b %-d, %Y}"
-    add(pill(W - PAD - (7 * len(upd) + 16), 30, upd))
-    add("</g>")
 
-    # KPI strip
+# Sections: each draws into `out` at (x, y) with width w.
+
+def header(out, x, y, w, s, now, compact):
+    out.append('<g data-od-id="repo-header">')
+    if compact:
+        out.append(text(x, y + 20, f"{clip(s['name'], 16)} · GitHub analytics", 18, "ink", 600))
+        out.append(text(x, y + 42, f"@{s['login']} · {s['repo_count']} public repos", 13, "text2"))
+        out.append(text(x, y + 61, f"{fmt(s['followers'])} followers · {fmt(s['following'])} following · "
+                                   f"updated {now:%b %-d}", 13, "text2"))
+        h = 76
+    else:
+        out.append(text(x, y + 20, f"{s['name']} · GitHub analytics", 20, "ink", 600))
+        out.append(text(x, y + 42, f"@{s['login']} · {s['repo_count']} public repositories · "
+                                   f"{fmt(s['followers'])} followers · {fmt(s['following'])} following", 13, "text2"))
+        upd = f"Updated {now:%b %-d, %Y}"
+        out.append(pill(x + w - (7 * len(upd) + 16), y + 6, upd))
+        h = 64
+    out.append("</g>")
+    return h
+
+
+def kpi_strip(out, x, y, w, s, cols):
     kpis = [
         ("Contributions", fmt(s["contributions"]), "past year"),
         ("Current streak", f"{s['current']} d", f"longest {s['longest']} d"),
@@ -155,116 +175,164 @@ def render(s, now):
         ("Pull requests", fmt(s["prs"]), f"{fmt(s['issues'])} issues opened"),
         ("Stars earned", fmt(s["stars"]), f"across {s['repo_count']} repos"),
     ]
-    kw = (inner - 4 * 12) / 5
-    add('<g data-od-id="kpi-strip">')
+    gap, ch = 12, 92
+    cw = (w - (cols - 1) * gap) / cols
+    out.append('<g data-od-id="kpi-strip">')
     for i, (label, value, sub) in enumerate(kpis):
-        x = PAD + i * (kw + 12)
-        add(card(x, 88, kw, 92))
-        add(text(x + 16, 112, label.upper(), 11, "text3", 600, extra='letter-spacing="0.6"'))
-        add(text(x + 16, 146, value, 28, "ink", 600))
-        add(text(x + 16, 168, sub, 12, "text2"))
-    add("</g>")
+        row, col = divmod(i, cols)
+        last_alone = i == len(kpis) - 1 and col == 0 and cols > 1
+        kx, ky = x + col * (cw + gap), y + row * (ch + gap)
+        out.append(card(kx, ky, w if last_alone else cw, ch))
+        out.append(text(kx + 16, ky + 24, label.upper(), 11, "text3", 600, extra='letter-spacing="0.6"'))
+        out.append(text(kx + 16, ky + 58, value, 28, "ink", 600))
+        out.append(text(kx + 16, ky + 80, sub, 12, "text2"))
+    out.append("</g>")
+    rows = -(-len(kpis) // cols)
+    return rows * ch + (rows - 1) * gap
 
-    left_w = (inner - GAP) * 2 / 3
-    right_x = PAD + left_w + GAP
-    right_w = inner - left_w - GAP
 
-    # Contribution activity (weekly bars)
-    y0, h = 196, 220
-    add('<g data-od-id="growth-chart">')
-    add(card(PAD, y0, left_w, h))
-    add(text(PAD + 20, y0 + 30, "Contribution activity", 14, "ink", 600))
-    add(text(PAD + left_w - 20, y0 + 30, f"{fmt(s['contributions'])} contributions · weekly", 12, "text2", anchor="end"))
+def activity(out, x, y, w, h, s):
+    out.append('<g data-od-id="growth-chart">')
+    out.append(card(x, y, w, h))
+    card_title(out, x, y, w, "Contribution activity", f"{fmt(s['contributions'])} · weekly")
     weeks = s["weeks"]
     peak = max(weeks) or 1
-    cx, cy, cw, ch = PAD + 20, y0 + 52, left_w - 40, 130
+    cx, cy, cw, ch = x + 20, y + 52, w - 40, h - 90
     step = cw / len(weeks)
     for i, v in enumerate(weeks):
         bh = max(2, v / peak * ch) if v else 2
         fill = "{accent}" if v else "{track}"
-        add(f'<rect x="{cx + i * step:.1f}" y="{cy + ch - bh:.1f}" width="{step - 2:.1f}" height="{bh:.1f}" rx="1.5" fill="{fill}"/>')
+        out.append(f'<rect x="{cx + i * step:.1f}" y="{cy + ch - bh:.1f}" width="{max(step - 2, 1):.1f}" '
+                   f'height="{bh:.1f}" rx="1.5" fill="{fill}"/>')
     first = dt.date.fromisoformat(s["first_day"])
     last = dt.date.fromisoformat(s["last_day"])
-    add(text(cx, cy + ch + 22, f"{first:%b %Y}", 11, "text3"))
-    add(text(cx + cw, cy + ch + 22, f"{last:%b %Y}", 11, "text3", anchor="end"))
-    add(text(cx + cw / 2, cy + ch + 22, f"peak {peak} / week", 11, "text3", anchor="middle"))
-    add("</g>")
+    out.append(text(cx, cy + ch + 22, f"{first:%b %Y}", 11, "text3"))
+    out.append(text(cx + cw, cy + ch + 22, f"{last:%b %Y}", 11, "text3", anchor="end"))
+    out.append(text(cx + cw / 2, cy + ch + 22, f"peak {peak} / week", 11, "text3", anchor="middle"))
+    out.append("</g>")
 
-    # Top languages
-    add('<g data-od-id="languages">')
-    add(card(right_x, y0, right_w, h))
-    add(text(right_x + 20, y0 + 30, "Top languages", 14, "ink", 600))
-    add(text(right_x + right_w - 20, y0 + 30, "by code size", 12, "text2", anchor="end"))
-    bx, bw = right_x + 20, right_w - 40
-    add(f'<rect x="{bx}" y="{y0 + 48}" width="{bw}" height="8" rx="4" fill="{{track}}"/>')
+
+def languages(out, x, y, w, h, s):
+    out.append('<g data-od-id="languages">')
+    out.append(card(x, y, w, h))
+    card_title(out, x, y, w, "Top languages", "by code size")
+    bx, bw = x + 20, w - 40
+    out.append(f'<rect x="{bx:.1f}" y="{y + 48:.1f}" width="{bw:.1f}" height="8" rx="4" fill="{{track}}"/>')
     off = 0
     for name, share, color in s["langs"]:
-        add(f'<rect x="{bx + off:.1f}" y="{y0 + 48}" width="{max(bw * share, 1):.1f}" height="8" fill="{color}"/>')
+        out.append(f'<rect x="{bx + off:.1f}" y="{y + 48:.1f}" width="{max(bw * share, 1):.1f}" height="8" fill="{color}"/>')
         off += bw * share
     for i, (name, share, color) in enumerate(s["langs"]):
-        ly = y0 + 84 + i * 28
-        add(f'<circle cx="{bx + 5}" cy="{ly - 4}" r="5" fill="{color}"/>')
-        add(text(bx + 18, ly, name, 13))
-        add(text(bx + bw, ly, f"{share * 100:.1f}%", 13, "text2", anchor="end"))
-    add("</g>")
+        ly = y + 84 + i * 28
+        out.append(f'<circle cx="{bx + 5:.1f}" cy="{ly - 4:.1f}" r="5" fill="{color}"/>')
+        out.append(text(bx + 18, ly, name, 13))
+        out.append(text(bx + bw, ly, f"{share * 100:.1f}%", 13, "text2", anchor="end"))
+    out.append("</g>")
 
-    # Top repositories table
-    y1, h1 = y0 + h + GAP, 232
-    add('<g data-od-id="activity">')
-    add(card(PAD, y1, left_w, h1))
-    add(text(PAD + 20, y1 + 30, "Top repositories", 14, "ink", 600))
-    cols = [(PAD + 20, "REPOSITORY", "start"), (PAD + 330, "LANGUAGE", "start"),
-            (PAD + left_w - 120, "STARS", "end"), (PAD + left_w - 20, "LAST PUSH", "end")]
-    for x, label, anchor in cols:
-        add(text(x, y1 + 58, label, 11, "text3", 600, anchor, 'letter-spacing="0.6"'))
+
+def repos(out, x, y, w, h, s, lang_col):
+    out.append('<g data-od-id="activity">')
+    out.append(card(x, y, w, h))
+    card_title(out, x, y, w, "Top repositories")
+    cols = [(x + 20, "REPOSITORY", "start"), (x + w - 120, "STARS", "end"), (x + w - 20, "LAST PUSH", "end")]
+    if lang_col:
+        cols.append((x + 310, "LANGUAGE", "start"))
+    for cx, label, anchor in cols:
+        out.append(text(cx, y + 58, label, 11, "text3", 600, anchor, 'letter-spacing="0.6"'))
     for i, r in enumerate(s["repos"]):
-        ry = y1 + 66 + i * 32
-        add(f'<line x1="{PAD + 20}" y1="{ry}" x2="{PAD + left_w - 20}" y2="{ry}" stroke="{{border}}"/>')
-        name = r["name"] if len(r["name"]) <= 34 else r["name"][:33] + "…"
-        add(text(PAD + 20, ry + 21, name, 13, "ink", 500))
-        lang = r["primaryLanguage"]["name"] if r["primaryLanguage"] else "—"
-        add(pill(PAD + 330, ry + 6, lang, "blue") if r["primaryLanguage"] else text(PAD + 330, ry + 21, lang, 13, "text3"))
-        add(text(PAD + left_w - 120, ry + 21, fmt(r["stargazerCount"]), 13, "ink", anchor="end"))
+        ry = y + 66 + i * 32
+        out.append(f'<line x1="{x + 20:.1f}" y1="{ry:.1f}" x2="{x + w - 20:.1f}" y2="{ry:.1f}" stroke="{{border}}"/>')
+        out.append(text(x + 20, ry + 21, clip(r["name"], 34 if lang_col else 22), 13, "ink", 500))
+        if lang_col:
+            lang = r["primaryLanguage"]
+            out.append(pill(x + 310, ry + 6, lang["name"], "blue") if lang else text(x + 310, ry + 21, "—", 13, "text3"))
+        out.append(text(x + w - 120, ry + 21, fmt(r["stargazerCount"]), 13, "ink", anchor="end"))
         pushed = dt.datetime.fromisoformat(r["pushedAt"].replace("Z", "+00:00"))
-        add(text(PAD + left_w - 20, ry + 21, f"{pushed:%b %-d, %Y}", 13, "text2", anchor="end"))
-    add("</g>")
+        out.append(text(x + w - 20, ry + 21, f"{pushed:%b %-d, %Y}", 13, "text2", anchor="end"))
+    out.append("</g>")
 
-    # Activity mix
-    add('<g data-od-id="contributors">')
-    add(card(right_x, y1, right_w, h1))
-    add(text(right_x + 20, y1 + 30, "Activity mix", 14, "ink", 600))
-    mix = [("Commits", s["commits"], "pill", "past year"), ("Pull requests", s["prs"], "blue", "all time"),
-           ("Code reviews", s["reviews"], "blue", "past year"), ("Issues", s["issues"], "amber", "all time")]
-    top = max(v for _, v, _, _ in mix) or 1
-    for i, (label, v, kind, span) in enumerate(mix):
-        my = y1 + 62 + i * 40
-        add(text(bx, my, label, 13))
-        add(text(bx + bw, my, f"{fmt(v)} · {span}", 12, "text2", anchor="end"))
-        add(f'<rect x="{bx}" y="{my + 9}" width="{bw}" height="6" rx="3" fill="{{track}}"/>')
-        add(f'<rect x="{bx}" y="{my + 9}" width="{max(bw * v / top, 3 if v else 0):.1f}" height="6" rx="3" fill="{{{kind}_fg}}"/>')
-    add("</g>")
 
-    # Provenance footer
-    fy = y1 + h1 + 30
-    add(text(PAD, fy, f"Source: GitHub GraphQL API · public data only · generated {now:%Y-%m-%d %H:%M} UTC "
-                      "by .github/workflows/dashboard.yml", 11, "text3", extra='data-od-id="provenance"'))
-    H = fy + 18
+def mix(out, x, y, w, h, s):
+    out.append('<g data-od-id="contributors">')
+    out.append(card(x, y, w, h))
+    card_title(out, x, y, w, "Activity mix")
+    rows = [("Commits", s["commits"], "pill", "past year"), ("Pull requests", s["prs"], "blue", "all time"),
+            ("Code reviews", s["reviews"], "blue", "past year"), ("Issues", s["issues"], "amber", "all time")]
+    top = max(v for _, v, _, _ in rows) or 1
+    bx, bw = x + 20, w - 40
+    for i, (label, v, kind, span) in enumerate(rows):
+        my = y + 62 + i * 40
+        out.append(text(bx, my, label, 13))
+        out.append(text(bx + bw, my, f"{fmt(v)} · {span}", 12, "text2", anchor="end"))
+        out.append(f'<rect x="{bx:.1f}" y="{my + 9:.1f}" width="{bw:.1f}" height="6" rx="3" fill="{{track}}"/>')
+        out.append(f'<rect x="{bx:.1f}" y="{my + 9:.1f}" width="{max(bw * v / top, 3 if v else 0):.1f}" '
+                   f'height="6" rx="3" fill="{{{kind}_fg}}"/>')
+    out.append("</g>")
+
+
+def footer(out, x, y, now, lines):
+    for i, line in enumerate(lines):
+        out.append(text(x, y + 14 + i * 16, line, 11, "text3", extra='data-od-id="provenance"'))
+    return 14 + (len(lines) - 1) * 16 + 18
+
+
+def desktop(s, now):
+    W, pad = 1000, 24
+    inner = W - 2 * pad
+    out = []
+    y = pad + header(out, pad, pad, inner, s, now, compact=False)
+    y += kpi_strip(out, pad, y, inner, s, cols=5) + GAP
+    lw = (inner - GAP) * 2 / 3
+    rx, rw = pad + lw + GAP, inner - lw - GAP
+    activity(out, pad, y, lw, 220, s)
+    languages(out, rx, y, rw, 220, s)
+    y += 220 + GAP
+    repos(out, pad, y, lw, 232, s, lang_col=True)
+    mix(out, rx, y, rw, 232, s)
+    y += 232 + 12
+    y += footer(out, pad, y, now, [f"Source: GitHub GraphQL API · public data only · generated "
+                                   f"{now:%Y-%m-%d %H:%M} UTC by .github/workflows/dashboard.yml"])
+    return W, y, out
+
+
+def mobile(s, now):
+    W, pad = 400, 16
+    inner = W - 2 * pad
+    out = []
+    y = pad + header(out, pad, pad, inner, s, now, compact=True) + 4
+    y += kpi_strip(out, pad, y, inner, s, cols=2) + GAP
+    for draw, h in ((activity, 200), (languages, 220), (lambda *a: repos(*a, lang_col=False), 232), (mix, 214)):
+        draw(out, pad, y, inner, h, s)
+        y += h + GAP
+    y += footer(out, pad, y - 4, now, ["Source: GitHub GraphQL API · public data only",
+                                       f"generated {now:%Y-%m-%d %H:%M} UTC · dashboard.yml"]) - 4
+    return W, y, out
+
+
+def alt_title(s):
+    return (f"{s['name']} GitHub analytics: {fmt(s['contributions'])} contributions in the past year, "
+            f"current streak {s['current']} days (longest {s['longest']}), {fmt(s['commits'])} commits, "
+            f"{fmt(s['prs'])} pull requests, {fmt(s['stars'])} stars, top language "
+            f"{s['langs'][0][0] if s['langs'] else 'n/a'}")
+
+
+def to_svg(W, H, out, title, theme):
+    """theme 'light'/'dark' bakes colors in; 'auto' bakes light and overrides via prefers-color-scheme."""
     body = "\n".join(out)
-    title = (f"{s['name']} GitHub analytics: {fmt(s['contributions'])} contributions in the past year, "
-             f"current streak {s['current']} days (longest {s['longest']}), {fmt(s['commits'])} commits, "
-             f"{fmt(s['prs'])} pull requests, {fmt(s['stars'])} stars, top language "
-             f"{s['langs'][0][0] if s['langs'] else 'n/a'}")
-    return H, body, title
-
-
-def to_svg(H, body, title, theme):
-    t = THEMES[theme]
+    t = THEMES["light" if theme == "auto" else theme]
+    style = ""
+    if theme == "auto":
+        swaps = {}
+        for k, light in THEMES["light"].items():
+            assert swaps.setdefault(light, THEMES["dark"][k]) == THEMES["dark"][k], k  # token hexes map 1:1
+        rules = " ".join(f'[fill="{a}"]{{fill:{b}}} [stroke="{a}"]{{stroke:{b}}}' for a, b in swaps.items())
+        style = f"<style>@media (prefers-color-scheme: dark) {{ {rules} }}</style>\n"
+    body = f'<rect width="{W}" height="{H:.0f}" rx="16" fill="{{canvas}}"/>\n' + body
     for k, v in t.items():
         body = body.replace("{" + k + "}", v)
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H:.0f}" viewBox="0 0 {W} {H:.0f}" '
             f'role="img" aria-label="{escape(title)}" font-family="{FONT}" '
-            f'style="font-variant-numeric: tabular-nums">\n<title>{escape(title)}</title>\n'
-            f'<rect width="{W}" height="{H}" rx="16" fill="{t["canvas"]}"/>\n{body}\n</svg>\n')
+            f'style="font-variant-numeric: tabular-nums">\n<title>{escape(title)}</title>\n{style}{body}\n</svg>\n')
 
 
 def check():
@@ -281,9 +349,12 @@ if __name__ == "__main__":
         sys.exit()
     login, out_dir = sys.argv[1], sys.argv[2]
     s = summarize(fetch(login, os.environ["GITHUB_TOKEN"]))
-    H, body, title = render(s, dt.datetime.now(dt.timezone.utc))
+    now = dt.datetime.now(dt.timezone.utc)
+    title = alt_title(s)
     os.makedirs(out_dir, exist_ok=True)
-    for theme in THEMES:
-        with open(os.path.join(out_dir, f"dashboard-{theme}.svg"), "w") as f:
-            f.write(to_svg(H, body, title, theme))
+    files = {"dashboard-light.svg": (desktop, "light"), "dashboard-dark.svg": (desktop, "dark"),
+             "dashboard-mobile.svg": (mobile, "auto")}
+    for name, (layout, theme) in files.items():
+        with open(os.path.join(out_dir, name), "w") as f:
+            f.write(to_svg(*layout(s, now), title, theme))
     print(title)
