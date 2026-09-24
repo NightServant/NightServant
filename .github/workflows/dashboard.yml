@@ -2,8 +2,17 @@ name: Profile Analytics Dashboard
 
 on:
   schedule:
-    - cron: "0 3 * * *"     # daily
+    - cron: "17 3 * * *"    # daily; off the top of the hour, when GitHub delays scheduled runs most
+  push:                     # re-render whenever the renderer changes (the bot's own commits don't retrigger)
+    branches: [main]
+    paths:
+      - .github/scripts/dashboard.py
+      - .github/workflows/dashboard.yml
   workflow_dispatch:
+
+concurrency:                # a push-triggered run and the daily run never race each other's commit
+  group: dashboard
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -23,4 +32,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/dashboard-*.svg
-          git diff --cached --quiet || { git commit -m "Update analytics dashboard" && git push; }
+          git diff --cached --quiet && exit 0
+          git commit -m "Update analytics dashboard"
+          git pull --rebase origin main   # main may have moved while rendering
+          git push
