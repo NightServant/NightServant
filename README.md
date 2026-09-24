@@ -215,17 +215,11 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 
 <div align="center">
 
-<img
-  src="https://raw.githubusercontent.com/NightServant/NightServant/main/profile-summary-card-output/tokyonight/3-stats.svg"
-  width="48%"
-  alt="NightServant's GitHub stats"
-/>
-&nbsp;
-<img
-  src="https://raw.githubusercontent.com/NightServant/NightServant/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg"
-  width="48%"
-  alt="Most-used languages across NightServant's repositories"
-/>
+<!-- Rendered daily from public GitHub data by .github/workflows/dashboard.yml -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-light.svg" width="100%" alt="GitHub analytics dashboard for NightServant, updated daily: followers and following, contributions and current and longest streak, commits, pull requests, issues, stars earned, weekly contribution activity for the past year, top languages, top repositories, and activity mix" />
+</picture>
 
 <br/><br/>
 

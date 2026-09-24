@@ -1,0 +1,26 @@
+name: Profile Analytics Dashboard
+
+on:
+  schedule:
+    - cron: "0 3 * * *"     # daily
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # commits the rendered SVGs
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render dashboard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .github/scripts/dashboard.py --check
+          python3 .github/scripts/dashboard.py "${{ github.repository_owner }}" assets
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/dashboard-*.svg
+          git diff --cached --quiet || { git commit -m "Update analytics dashboard" && git push; }
