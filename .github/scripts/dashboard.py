@@ -16,27 +16,30 @@ import urllib.request
 from xml.sax.saxutils import escape
 
 QUERY = """
-query($login: String!, $pr: String!, $issue: String!) {
+query($login: String!, $pr: String!) {
   user(login: $login) {
-    name login
+    login
     followers { totalCount }
     following { totalCount }
     repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, first: 100,
                  orderBy: {field: PUSHED_AT, direction: DESC}) {
       totalCount
       nodes {
-        name stargazerCount pushedAt
+        name pushedAt
         primaryLanguage { name color }
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
       }
     }
     contributionsCollection {
-      totalCommitContributions totalPullRequestReviewContributions
+      totalCommitContributions
+      commitContributionsByRepository(maxRepositories: 10) {
+        repository { name isPrivate pushedAt primaryLanguage { name } }
+        contributions { totalCount }
+      }
       contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
     }
   }
   prs: search(query: $pr, type: ISSUE) { issueCount }
-  issues: search(query: $issue, type: ISSUE) { issueCount }
 }"""
 
 THEMES = {
@@ -60,7 +63,6 @@ def fetch(login, token):
     body = json.dumps({"query": QUERY, "variables": {
         "login": login,
         "pr": f"author:{login} is:pr is:public",
-        "issue": f"author:{login} is:issue is:public",
     }}).encode()
     req = urllib.request.Request("https://api.github.com/graphql", body, {
         "Authorization": f"bearer {token}", "Content-Type": "application/json"})
@@ -86,6 +88,14 @@ def streaks(counts, today_counted=False):
     return current, longest
 
 
+def weekday_totals(days):
+    """Contributions per weekday, Monday first."""
+    totals = [0] * 7
+    for day in days:
+        totals[dt.date.fromisoformat(day["date"]).weekday()] += day["contributionCount"]
+    return totals
+
+
 def summarize(d):
     u = d["user"]
     repos = u["repositories"]["nodes"]
@@ -101,19 +111,20 @@ def summarize(d):
     total_bytes = sum(s for s, _ in langs.values()) or 1
     top_langs = sorted(langs.items(), key=lambda kv: -kv[1][0])[:5]
     return dict(
-        name=u["name"] or u["login"], login=u["login"],
+        login=u["login"],
         followers=u["followers"]["totalCount"], following=u["following"]["totalCount"],
         repo_count=u["repositories"]["totalCount"],
-        stars=sum(r["stargazerCount"] for r in repos),
         contributions=cc["contributionCalendar"]["totalContributions"],
-        commits=cc["totalCommitContributions"], reviews=cc["totalPullRequestReviewContributions"],
-        prs=d["prs"]["issueCount"], issues=d["issues"]["issueCount"],
+        commits=cc["totalCommitContributions"], prs=d["prs"]["issueCount"],
+        active_days=sum(1 for day in days if day["contributionCount"]),
+        weekdays=weekday_totals(days),
         current=current, longest=longest,
         weeks=[sum(x["contributionCount"] for x in w["contributionDays"])
                for w in cc["contributionCalendar"]["weeks"]],
         first_day=days[0]["date"], last_day=days[-1]["date"],
         langs=[(n, s / total_bytes, c) for n, (s, c) in top_langs],
-        repos=sorted(repos, key=lambda r: -r["stargazerCount"])[:5],  # stable: ties keep push order
+        active=[(c["repository"], c["contributions"]["totalCount"]) for c in cc["commitContributionsByRepository"]
+                if not c["repository"]["isPrivate"] and c["repository"]["name"] != u["login"]][:5],
     )
 
 
@@ -151,14 +162,14 @@ def card_title(out, x, y, w, title, note=""):
 def header(out, x, y, w, s, now, compact):
     out.append('<g data-od-id="repo-header">')
     if compact:
-        out.append(text(x, y + 20, f"{clip(s['name'], 16)} · GitHub analytics", 18, "ink", 600))
-        out.append(text(x, y + 42, f"@{s['login']} · {s['repo_count']} public repos", 13, "text2"))
-        out.append(text(x, y + 61, f"{fmt(s['followers'])} followers · {fmt(s['following'])} following · "
-                                   f"updated {now:%b %-d}", 13, "text2"))
+        out.append(text(x, y + 20, f"@{s['login']}", 18, "ink", 600))
+        out.append(text(x, y + 42, f"{s['repo_count']} public repos · {fmt(s['followers'])} followers · "
+                                   f"{fmt(s['following'])} following", 13, "text2"))
+        out.append(text(x, y + 61, f"Updated {now:%b %-d, %Y}", 13, "text2"))
         h = 76
     else:
-        out.append(text(x, y + 20, f"{s['name']} · GitHub analytics", 20, "ink", 600))
-        out.append(text(x, y + 42, f"@{s['login']} · {s['repo_count']} public repositories · "
+        out.append(text(x, y + 20, f"@{s['login']}", 20, "ink", 600))
+        out.append(text(x, y + 42, f"{s['repo_count']} public repositories · "
                                    f"{fmt(s['followers'])} followers · {fmt(s['following'])} following", 13, "text2"))
         upd = f"Updated {now:%b %-d, %Y}"
         out.append(pill(x + w - (7 * len(upd) + 16), y + 6, upd))
@@ -172,8 +183,8 @@ def kpi_strip(out, x, y, w, s, cols):
         ("Contributions", fmt(s["contributions"]), "past year"),
         ("Current streak", f"{s['current']} d", f"longest {s['longest']} d"),
         ("Commits", fmt(s["commits"]), "past year"),
-        ("Pull requests", fmt(s["prs"]), f"{fmt(s['issues'])} issues opened"),
-        ("Stars earned", fmt(s["stars"]), f"across {s['repo_count']} repos"),
+        ("Pull requests", fmt(s["prs"]), "all time, public"),
+        ("Active days", fmt(s["active_days"]), "with contributions"),
     ]
     gap, ch = 12, 92
     cw = (w - (cols - 1) * gap) / cols
@@ -233,40 +244,40 @@ def languages(out, x, y, w, h, s):
 def repos(out, x, y, w, h, s, lang_col):
     out.append('<g data-od-id="activity">')
     out.append(card(x, y, w, h))
-    card_title(out, x, y, w, "Top repositories")
-    cols = [(x + 20, "REPOSITORY", "start"), (x + w - 120, "STARS", "end"), (x + w - 20, "LAST PUSH", "end")]
+    card_title(out, x, y, w, "Most active repositories", "commits · past year")
+    cols = [(x + 20, "REPOSITORY", "start"), (x + w - 120, "COMMITS", "end"), (x + w - 20, "LAST PUSH", "end")]
     if lang_col:
         cols.append((x + 310, "LANGUAGE", "start"))
     for cx, label, anchor in cols:
         out.append(text(cx, y + 58, label, 11, "text3", 600, anchor, 'letter-spacing="0.6"'))
-    for i, r in enumerate(s["repos"]):
+    for i, (r, commits) in enumerate(s["active"]):
         ry = y + 66 + i * 32
         out.append(f'<line x1="{x + 20:.1f}" y1="{ry:.1f}" x2="{x + w - 20:.1f}" y2="{ry:.1f}" stroke="{{border}}"/>')
         out.append(text(x + 20, ry + 21, clip(r["name"], 34 if lang_col else 22), 13, "ink", 500))
         if lang_col:
             lang = r["primaryLanguage"]
             out.append(pill(x + 310, ry + 6, lang["name"], "blue") if lang else text(x + 310, ry + 21, "—", 13, "text3"))
-        out.append(text(x + w - 120, ry + 21, fmt(r["stargazerCount"]), 13, "ink", anchor="end"))
+        out.append(text(x + w - 120, ry + 21, fmt(commits), 13, "ink", anchor="end"))
         pushed = dt.datetime.fromisoformat(r["pushedAt"].replace("Z", "+00:00"))
         out.append(text(x + w - 20, ry + 21, f"{pushed:%b %-d, %Y}", 13, "text2", anchor="end"))
     out.append("</g>")
 
 
-def mix(out, x, y, w, h, s):
+def rhythm(out, x, y, w, h, s):
     out.append('<g data-od-id="contributors">')
     out.append(card(x, y, w, h))
-    card_title(out, x, y, w, "Activity mix")
-    rows = [("Commits", s["commits"], "pill", "past year"), ("Pull requests", s["prs"], "blue", "all time"),
-            ("Code reviews", s["reviews"], "blue", "past year"), ("Issues", s["issues"], "amber", "all time")]
-    top = max(v for _, v, _, _ in rows) or 1
-    bx, bw = x + 20, w - 40
-    for i, (label, v, kind, span) in enumerate(rows):
-        my = y + 62 + i * 40
-        out.append(text(bx, my, label, 13))
-        out.append(text(bx + bw, my, f"{fmt(v)} · {span}", 12, "text2", anchor="end"))
-        out.append(f'<rect x="{bx:.1f}" y="{my + 9:.1f}" width="{bw:.1f}" height="6" rx="3" fill="{{track}}"/>')
-        out.append(f'<rect x="{bx:.1f}" y="{my + 9:.1f}" width="{max(bw * v / top, 3 if v else 0):.1f}" '
-                   f'height="6" rx="3" fill="{{{kind}_fg}}"/>')
+    card_title(out, x, y, w, "Weekly rhythm", "contributions by day")
+    totals = s["weekdays"]
+    top = max(totals) or 1
+    bx, bw = x + 58, w - 78 - 36
+    for i, (day, v) in enumerate(zip(("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"), totals)):
+        ry = y + 62 + i * 24
+        out.append(text(x + 20, ry, day, 12, "text2"))
+        out.append(f'<rect x="{bx:.1f}" y="{ry - 9:.1f}" width="{bw:.1f}" height="8" rx="4" fill="{{track}}"/>')
+        kind = "{accent}" if v == top else "{text3}"
+        out.append(f'<rect x="{bx:.1f}" y="{ry - 9:.1f}" width="{max(bw * v / top, 3 if v else 0):.1f}" '
+                   f'height="8" rx="4" fill="{kind}"/>')
+        out.append(text(x + w - 20, ry, fmt(v), 12, "ink" if v == top else "text2", anchor="end"))
     out.append("</g>")
 
 
@@ -288,7 +299,7 @@ def desktop(s, now):
     languages(out, rx, y, rw, 220, s)
     y += 220 + GAP
     repos(out, pad, y, lw, 232, s, lang_col=True)
-    mix(out, rx, y, rw, 232, s)
+    rhythm(out, rx, y, rw, 232, s)
     y += 232 + 12
     y += footer(out, pad, y, now, [f"Source: GitHub GraphQL API · public data only · generated "
                                    f"{now:%Y-%m-%d %H:%M} UTC by .github/workflows/dashboard.yml"])
@@ -301,7 +312,7 @@ def mobile(s, now):
     out = []
     y = pad + header(out, pad, pad, inner, s, now, compact=True) + 4
     y += kpi_strip(out, pad, y, inner, s, cols=2) + GAP
-    for draw, h in ((activity, 200), (languages, 220), (lambda *a: repos(*a, lang_col=False), 232), (mix, 214)):
+    for draw, h in ((activity, 200), (languages, 220), (lambda *a: repos(*a, lang_col=False), 232), (rhythm, 232)):
         draw(out, pad, y, inner, h, s)
         y += h + GAP
     y += footer(out, pad, y - 4, now, ["Source: GitHub GraphQL API · public data only",
@@ -310,9 +321,9 @@ def mobile(s, now):
 
 
 def alt_title(s):
-    return (f"{s['name']} GitHub analytics: {fmt(s['contributions'])} contributions in the past year, "
+    return (f"@{s['login']} GitHub activity: {fmt(s['contributions'])} contributions in the past year, "
             f"current streak {s['current']} days (longest {s['longest']}), {fmt(s['commits'])} commits, "
-            f"{fmt(s['prs'])} pull requests, {fmt(s['stars'])} stars, top language "
+            f"{fmt(s['prs'])} pull requests, active on {s['active_days']} days, top language "
             f"{s['langs'][0][0] if s['langs'] else 'n/a'}")
 
 

@@ -1,177 +1,92 @@
 <div align="center">
 
-<!-- Animated Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0&animation=fadeIn" width="100%" alt="Elijah Gabe Cervantes — Frontend Developer banner" />
+<img src="https://capsule-render.vercel.app/api?type=wave&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0" width="100%" alt="Elijah Gabe Cervantes (NightServant), frontend developer moving into full-stack" />
 
-<!-- Typing Animation: phones get a smaller-canvas version in a teal readable on both themes;
-     desktop gets darker teal on light / bright teal on dark -->
-<picture>
-  <source media="(max-width: 700px)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=16&duration=3000&pause=1000&color=259089&background=00000000&center=true&vCenter=true&width=400&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" />
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=38B2AC&background=00000000&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" />
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=20&duration=3000&pause=1000&color=1F7A73&background=00000000&center=true&vCenter=true&width=650&lines=⚡+Engineering+High-Performance+Frontends;🎨+Crafting+Seamless+User+Experiences;🔄+Expanding+Into+Full-Stack+Development;🚀+BSCS+Graduate+•+Tarlac+State+University;🌐+Modern+Web+Specialist+%26+UI+Architect" alt="Engineering high-performance frontends, crafting seamless user experiences, expanding into full-stack development, BSCS graduate from Tarlac State University, modern web specialist and UI architect" />
-</picture>
+### Frontend developer building fast, accessible React and Next.js apps, and shipping them full-stack.
 
-<!-- Visitor Counter -->
-![Profile views](https://komarev.com/ghpvc/?username=NightServant&label=Profile%20views&color=38B2AC&style=flat-square)
+<a href="https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
+<a href="mailto:egabecervantes@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Elijah" /></a>
+<a href="https://worktrack-jobs.vercel.app"><img src="https://img.shields.io/badge/Live_demo-Worktrack-1F7A73?style=for-the-badge&logo=vercel&logoColor=white" alt="Live demo of Worktrack" /></a>
 
 </div>
 
----
+## About
 
-## 👨‍💻 About Me
+I'm Elijah, a Computer Science graduate from Tarlac State University and a frontend developer based in the Philippines. I specialize in frontend architecture and user experience, and I'm extending that into the backend (APIs, databases, auth) so I can own a feature end to end. My recent work runs on Next.js with Supabase, and on Laravel with Inertia and React.
 
-> 🎓 **Bachelor of Science in Computer Science** — Tarlac State University
->
-> 💼 **Frontend Developer** based in the Philippines 🇵🇭, working toward becoming a **Full-Stack Developer**
->
-> ⚡ I specialize in engineering **high-performance frontend architectures** and **seamless user experiences** — turning designs into living, breathing interfaces.
->
-> 🔄 I'm actively extending that foundation into backend engineering — APIs, databases, and server-side logic — so I can own a feature end-to-end, not just the UI layer.
->
-> 🌉 I bridge the gap between complex requirements and elegant, maintainable code, on both sides of the stack.
+**Currently focused on**
 
----
+- **React and Next.js architecture:** rendering strategies, state management, code splitting and lazy loading
+- **Design to code:** Figma workflows, design systems, and WCAG 2.1 AA accessibility
+- **Backend depth:** APIs, relational databases, and auth with Laravel, PostgreSQL, and MySQL
 
-## 🎯 Developer Objectives
+Open to internships, freelance work, open-source collaboration, and frontend or full-stack roles.
 
-My roadmap: **frontend mastery today, full-stack ownership next.** Three pillars I'm actively working toward:
+## Featured projects
 
-#### 🏗️ Objective 1 — Master Advanced React & Next.js Architecture
+### [Worktrack](https://github.com/NightServant/Worktrack) · [Live demo ↗](https://worktrack-jobs.vercel.app)
 
-Build production-grade SPAs and SSR apps with optimized rendering strategies, state management, and performance-first patterns like code splitting and lazy loading — see **AeroWeather** below.
+A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by [Ensues](https://github.com/Ensues).
 
-#### 🎨 Objective 2 — Achieve UI/UX Design Fluency
+<sub>Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</sub>
 
-Bridge the gap between design and engineering — master Figma-to-code workflows, design systems, accessibility (WCAG 2.1 AA), and micro-interaction design that elevates user delight.
+### [Smart HRMS](https://github.com/NightServant/Smart-HRMS)
 
-#### 🔄 Objective 3 — Transition Into Full-Stack Engineering
+An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.
 
-Extend frontend expertise into backend territory — APIs, relational databases, auth, and server-side logic (PHP/Laravel, MySQL) — to design, build, and ship complete applications end-to-end, as in **Smart HRMS** and **Online Resume Builder**.
+<sub>Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
 
----
+### [Baguio 3D](https://github.com/NightServant/baguio-city-3d)
 
-## 🚀 Featured Projects — Frontend Foundation → Full-Stack Growth
+An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.
 
-Projects below are ordered to trace the actual arc: programming fundamentals, then frontend depth, then the first steps into owning the backend too.
+<sub>Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis</sub>
 
-<details>
-<summary><h3>🧱 Programming Foundations (earlier coursework)</h3></summary>
-<br>
+### [Clover](https://github.com/NightServant/4chan-redesign)
 
-#### [Java Calculator](https://github.com/NightServant/Java-Calculator)
+A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.
 
-GUI calculator built with Java Swing for a Computer Programming / Capstone requirement — the four basic operations plus percentage, with a custom launch screen and credits window. Early practice with event-driven UI and OOP structure.
+<sub>Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
 
-`Java` `Java Swing` `IntelliJ IDEA`
+### [AeroWeather](https://github.com/NightServant/aero_weather) · [Live demo ↗](https://aero-weather-nightservants-projects.vercel.app)
 
-#### [I Love Music 1.0](https://github.com/NightServant/I-Love-Music-1.0)
+A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device.
 
-Java Swing desktop music player — a Spotify-like app built for a Computer Programming Lab case study. Covers frame/panel composition, custom UI components, and file I/O for reading local media.
+<sub>Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</sub>
 
-`Java` `Java Swing` `File I/O`
+More, including earlier coursework, in my [repositories](https://github.com/NightServant?tab=repositories).
 
-</details>
+## Tech stack
 
-### 🎨 Frontend Depth
+**Languages:** TypeScript, JavaScript, PHP, Python, Java, SQL
 
-#### [AeroWeather](https://github.com/NightServant/aero_weather)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts%2Cjs%2Cphp%2Cpy%2Cjava&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=ts,js,php,py,java&theme=light" height="40" alt="TypeScript, JavaScript, PHP, Python, and Java icons" />
+</picture>
 
-A modern weather dashboard built solo with **Next.js 16 (App Router, Turbopack)** and **React 19** — a glassmorphic, single-scroll interface with live forecast, air quality, and geocoding data from Open-Meteo, weather-driven gradient theming, an interactive Leaflet map, and unit-tested utility logic (Vitest). No backend by design — all state is client-side — making it a focused showcase of advanced frontend architecture.
+**Frontend:** React, Next.js, Tailwind CSS, Vite, Three.js, plus Inertia.js and shadcn/ui on Radix
 
-`Next.js` `React` `TypeScript` `Tailwind CSS` `Vitest` `Leaflet`
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react%2Cnextjs%2Ctailwind%2Cvite%2Cthreejs&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,threejs&theme=light" height="40" alt="React, Next.js, Tailwind CSS, Vite, and Three.js icons" />
+</picture>
 
-#### [TSU Online Library](https://github.com/Ensues/online-library)
+**Backend and data:** Laravel, Supabase, PostgreSQL / PostGIS, MySQL, Prisma, Redis
 
-A hackathon redesign of the college library's website, built as part of a 3-person team. Focused entirely on UI/UX — a modernized book/thesis gallery, catalog filtering, and guest/login access — using plain HTML, CSS, and JavaScript under a tight timebox.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=laravel%2Csupabase%2Cpostgres%2Cmysql%2Cprisma%2Credis&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=laravel,supabase,postgres,mysql,prisma,redis&theme=light" height="40" alt="Laravel, Supabase, PostgreSQL, MySQL, Prisma, and Redis icons" />
+</picture>
 
-`HTML5` `CSS3` `JavaScript` · team project
+**Testing, desktop, and tooling:** Vitest and Pest, Electron, Figma, Git, Vercel, with Claude Code and Codex for AI-assisted work
 
-### 🔄 Stepping Into Full-Stack
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vitest%2Celectron%2Cfigma%2Cgit%2Cvercel&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=vitest,electron,figma,git,vercel&theme=light" height="40" alt="Vitest, Electron, Figma, Git, and Vercel icons" />
+</picture>
 
-#### [Online Resume Builder](https://github.com/NightServant/Online-Resume-Builder)
-
-An ATS-friendly resume builder built with a 5-person team for a Web Programming course — the first project where I worked past the UI into the backend: **PHP** handles registration, login, session/account management, and resume-data persistence against a **MySQL** database, alongside the HTML/CSS/JS frontend.
-
-`HTML5` `CSS3` `JavaScript` `PHP` `MySQL` · team project
-
-#### [Smart HRMS](https://github.com/NightServant/Smart-HRMS)
-
-The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.js v2)** HR platform with role-aware access for employees, evaluators, HR, and PMT officers. Backed by **MySQL** and four Python-based AI modules (rule-based leave/IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a content-based training recommender), and shipped as a desktop app via Electron. This is where frontend skill meets backend architecture, data modeling, and system design.
-
-`Laravel` `React` `Inertia.js` `MySQL` `Python` `Electron`
-
----
-
-## 🛠️ Technical Stack
-
-### 💬 Languages
-
-<p align="left">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-</p>
-
----
-
-### 🌐 Frontend & UI Ecosystem
-
-<p align="left">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
-  <img src="https://img.shields.io/badge/ShadCN_UI-000000?style=for-the-badge&logo=shadcnui&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mary_UI-FF69B4?style=for-the-badge&logoColor=white" />
-</p>
-
----
-
-### ⚙️ Backend & Full-Stack Frameworks
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Inertia.js-9553E9?style=for-the-badge&logo=inertia&logoColor=white" />
-  <img src="https://img.shields.io/badge/Livewire-FB70A9?style=for-the-badge&logo=livewire&logoColor=white" />
-</p>
-
----
-
-<details>
-<summary><h3>🧰 IDEs, Tools & AI-Assisted Development</h3></summary>
-<br>
-
-**IDEs & Developer Tools**
-
-<p align="left">
-  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyCharm-21D789?style=for-the-badge&logo=pycharm&logoColor=black" />
-  <img src="https://img.shields.io/badge/Notepad++-90E59A?style=for-the-badge&logo=notepadplusplus&logoColor=black" />
-   <img src="https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white" />
-</p>
-
-**AI-Assisted Development**
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI_Codex-412991?style=for-the-badge&logo=openai&logoColor=white" />
-</p>
-
-</details>
-
----
-
-## 📊 GitHub Analytics
-
-<div align="center">
+## GitHub activity
 
 <!-- Rendered daily from public GitHub data by .github/workflows/dashboard.yml.
      Phones get a single-column layout that themes itself; the width source must not mention
@@ -179,37 +94,11 @@ The current flagship project — a full-stack **Laravel 12 + React 19 (Inertia.j
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-dark.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-light.svg" width="100%" alt="GitHub analytics dashboard for NightServant, updated daily: followers and following, contributions and current and longest streak, commits, pull requests, issues, stars earned, weekly contribution activity for the past year, top languages, top repositories, and activity mix" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/dashboard-light.svg" width="100%" alt="GitHub activity dashboard for NightServant, updated daily: contributions, current and longest streak, commits, pull requests, active days, weekly contribution activity for the past year, top languages, most active repositories, and contributions by weekday" />
 </picture>
 
-<br/><br/>
+## Get in touch
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
+The quickest way to reach me is [email](mailto:egabecervantes@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/).
 
-</div>
-
----
-
-## 🤝 Let's Connect & Collaborate
-
-<div align="center">
-
-<p>I'm open to <strong>internships</strong>, <strong>freelance projects</strong>, <strong>open-source collaborations</strong>, and <strong>full-time frontend roles</strong> — with an eye toward <strong>full-stack opportunities</strong> as I grow into the backend.</p>
-
-<a href="https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-&nbsp;
-<a href="mailto:egabecervantes@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-Drop%20a%20Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-&nbsp;
-<a href="https://facebook.com/egabecervantes">
-  <img src="https://img.shields.io/badge/Facebook-Follow-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
-</a>
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" width="100%" alt="Profile footer banner" />
-
-</div>
+<img src="https://komarev.com/ghpvc/?username=NightServant&label=Profile%20views&color=1F7A73&style=flat-square" alt="Profile view count" />
