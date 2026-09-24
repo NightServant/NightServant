@@ -1,0 +1,41 @@
+name: Featured Projects
+
+# Other repos' events can't trigger this repo, so poll: the README only changes (and a commit
+# only happens) when a repo is created, gets a homepage/deployment/release, or its overrides change.
+on:
+  schedule:
+    - cron: "41 * * * *"    # hourly, off the top of the hour
+  push:
+    branches: [main]
+    paths:
+      - .github/projects.json
+      - .github/scripts/projects.py
+      - .github/workflows/projects.yml
+  workflow_dispatch:
+
+concurrency:
+  group: projects
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # commits README.md
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate Featured projects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .github/scripts/projects.py --check
+          python3 .github/scripts/projects.py "${{ github.repository_owner }}" README.md .github/projects.json
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet && exit 0
+          git commit -m "Update featured projects"
+          git pull --rebase origin main   # the dashboard workflow may have pushed meanwhile
+          git push

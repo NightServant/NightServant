@@ -24,35 +24,37 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
 
 ## Featured projects
 
-### [Worktrack](https://github.com/NightServant/Worktrack) · [Live demo ↗](https://worktrack-jobs.vercel.app)
+<!-- PROJECTS:START -->
+### [Worktrack](https://github.com/NightServant/Worktrack) · [Live demo ↗](https://worktrack-jobs.vercel.app/)
 
 A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by [Ensues](https://github.com/Ensues).
 
-<sub>Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</sub>
-
-### [Smart HRMS](https://github.com/NightServant/Smart-HRMS)
-
-An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.
-
-<sub>Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
-
-### [Baguio 3D](https://github.com/NightServant/baguio-city-3d)
-
-An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.
-
-<sub>Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis</sub>
+<sub>**Live** — Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</sub>
 
 ### [Clover](https://github.com/NightServant/4chan-redesign)
 
 A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.
 
-<sub>Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
+<sub>**In development** — Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
 
-### [AeroWeather](https://github.com/NightServant/aero_weather) · [Live demo ↗](https://aero-weather-nightservants-projects.vercel.app)
+### [Baguio 3D](https://github.com/NightServant/baguio-city-3d)
+
+An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.
+
+<sub>**In development** — Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis</sub>
+
+### [AeroWeather](https://github.com/NightServant/aero_weather) · [Live demo ↗](https://aero-weather-nightservants-projects.vercel.app/)
 
 A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device.
 
-<sub>Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</sub>
+<sub>**Live** — Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</sub>
+
+### [Smart HRMS](https://github.com/NightServant/Smart-HRMS)
+
+An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.
+
+<sub>**In development** — Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
+<!-- PROJECTS:END -->
 
 More, including earlier coursework, in my [repositories](https://github.com/NightServant?tab=repositories).
 

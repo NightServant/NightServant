@@ -1,0 +1,30 @@
+{
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, or stack line. Repos listed in 'hidden' never appear.",
+  "hidden": [],
+  "projects": {
+    "Worktrack": {
+      "blurb": "A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by [Ensues](https://github.com/Ensues).",
+      "stack": "Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest"
+    },
+    "Smart-HRMS": {
+      "title": "Smart HRMS",
+      "blurb": "An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.",
+      "stack": "Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest"
+    },
+    "baguio-city-3d": {
+      "title": "Baguio 3D",
+      "blurb": "An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.",
+      "stack": "Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis"
+    },
+    "4chan-redesign": {
+      "title": "Clover",
+      "blurb": "A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.",
+      "stack": "Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest"
+    },
+    "aero_weather": {
+      "title": "AeroWeather",
+      "blurb": "A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device.",
+      "stack": "Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest"
+    }
+  }
+}
