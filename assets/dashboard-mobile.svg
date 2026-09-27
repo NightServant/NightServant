@@ -5,7 +5,7 @@
 <g data-od-id="repo-header">
 <text x="16.0" y="36.0" font-size="18" font-weight="600" fill="#0a0a0a" text-anchor="start" >@NightServant</text>
 <text x="16.0" y="58.0" font-size="13" font-weight="400" fill="#6b6b6b" text-anchor="start" >11 public repos · 12 followers · 20 following</text>
-<text x="16.0" y="77.0" font-size="13" font-weight="400" fill="#6b6b6b" text-anchor="start" >Updated Sep 26, 2026</text>
+<text x="16.0" y="77.0" font-size="13" font-weight="400" fill="#6b6b6b" text-anchor="start" >Updated Sep 27, 2026</text>
 </g>
 <g data-od-id="kpi-strip">
 <rect x="16.0" y="96.0" width="178.0" height="92" rx="12" fill="#ffffff" stroke="#ececea"/>
@@ -49,24 +49,24 @@
 <rect x="116.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="122.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="128.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="135.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="141.2" y="569.2" width="4.2" height="4.8" rx="1.5" fill="#1f7a73"/>
+<rect x="135.0" y="569.2" width="4.2" height="4.8" rx="1.5" fill="#1f7a73"/>
+<rect x="141.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="147.4" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="153.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="159.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="166.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="172.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="178.3" y="566.3" width="4.2" height="7.7" rx="1.5" fill="#1f7a73"/>
-<rect x="184.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="190.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#1f7a73"/>
+<rect x="172.2" y="566.3" width="4.2" height="7.7" rx="1.5" fill="#1f7a73"/>
+<rect x="178.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
+<rect x="184.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#1f7a73"/>
+<rect x="190.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="196.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="203.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="209.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="215.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="221.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="227.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="234.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="240.2" y="563.4" width="4.2" height="10.6" rx="1.5" fill="#1f7a73"/>
+<rect x="234.0" y="563.4" width="4.2" height="10.6" rx="1.5" fill="#1f7a73"/>
+<rect x="240.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="246.4" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="252.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="258.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
@@ -77,15 +77,15 @@
 <rect x="289.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="295.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="302.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="308.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="314.5" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
-<rect x="320.7" y="492.9" width="4.2" height="81.1" rx="1.5" fill="#1f7a73"/>
-<rect x="326.9" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
-<rect x="333.1" y="543.1" width="4.2" height="30.9" rx="1.5" fill="#1f7a73"/>
-<rect x="339.2" y="480.4" width="4.2" height="93.6" rx="1.5" fill="#1f7a73"/>
-<rect x="345.4" y="507.4" width="4.2" height="66.6" rx="1.5" fill="#1f7a73"/>
-<rect x="351.6" y="464.0" width="4.2" height="110.0" rx="1.5" fill="#1f7a73"/>
-<rect x="357.8" y="524.8" width="4.2" height="49.2" rx="1.5" fill="#1f7a73"/>
+<rect x="308.3" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
+<rect x="314.5" y="492.9" width="4.2" height="81.1" rx="1.5" fill="#1f7a73"/>
+<rect x="320.7" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
+<rect x="326.9" y="543.1" width="4.2" height="30.9" rx="1.5" fill="#1f7a73"/>
+<rect x="333.1" y="480.4" width="4.2" height="93.6" rx="1.5" fill="#1f7a73"/>
+<rect x="339.2" y="507.4" width="4.2" height="66.6" rx="1.5" fill="#1f7a73"/>
+<rect x="345.4" y="464.0" width="4.2" height="110.0" rx="1.5" fill="#1f7a73"/>
+<rect x="351.6" y="524.8" width="4.2" height="49.2" rx="1.5" fill="#1f7a73"/>
+<rect x="357.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <text x="36.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" >Sep 2025</text>
 <text x="364.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="end" >Sep 2026</text>
 <text x="200.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="middle" >peak 114 / week</text>
@@ -174,5 +174,5 @@
 <text x="364.0" y="1318.0" font-size="12" font-weight="400" fill="#6b6b6b" text-anchor="end" >71</text>
 </g>
 <text x="16.0" y="1370.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" data-od-id="provenance">Source: GitHub GraphQL API · public data only</text>
-<text x="16.0" y="1386.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" data-od-id="provenance">generated 2026-09-26 08:37 UTC · dashboard.yml</text>
+<text x="16.0" y="1386.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" data-od-id="provenance">generated 2026-09-27 09:17 UTC · dashboard.yml</text>
 </svg>
