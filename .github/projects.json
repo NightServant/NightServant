@@ -1,5 +1,5 @@
 {
-  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, or stack line. Repos listed in 'hidden' never appear.",
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, or live demo URL ('homepage'). Repos listed in 'hidden' never appear.",
   "hidden": [],
   "projects": {
     "Worktrack": {
@@ -8,6 +8,7 @@
     },
     "Smart-HRMS": {
       "title": "Smart HRMS",
+      "homepage": "https://smart-hrms.onrender.com/",
       "blurb": "An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.",
       "stack": "Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest"
     },

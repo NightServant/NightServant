@@ -31,11 +31,11 @@ A job-search tracker with an application pipeline, analytics, and a CV builder t
 
 <sub>**Live** — Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</sub>
 
-### [Clover](https://github.com/NightServant/4chan-redesign)
+### [Clover](https://github.com/NightServant/4chan-redesign) · [Live demo ↗](https://clover-lac.vercel.app)
 
 A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.
 
-<sub>**In development** — Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
+<sub>**Live** — Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
 
 ### [Baguio 3D](https://github.com/NightServant/baguio-city-3d)
 
@@ -49,11 +49,11 @@ A single-page weather dashboard with current conditions, air quality, and a two-
 
 <sub>**Live** — Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</sub>
 
-### [Smart HRMS](https://github.com/NightServant/Smart-HRMS)
+### [Smart HRMS](https://github.com/NightServant/Smart-HRMS) · [Live demo ↗](https://smart-hrms.onrender.com/)
 
 An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.
 
-<sub>**In development** — Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
+<sub>**Live** — Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
 <!-- PROJECTS:END -->
 
 More, including earlier coursework, in my [repositories](https://github.com/NightServant?tab=repositories).

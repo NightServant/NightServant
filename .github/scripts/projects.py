@@ -3,7 +3,7 @@
 Every public, non-fork repo pushed in the last year is listed, newest first. Status comes from
 GitHub itself: New (created in the last 30 days), Live (homepage URL set), Deployed (a successful
 production deployment), Released <tag> (latest release), Completed (`completed` topic or archived).
-Titles, blurbs, and stack lines can be overridden in .github/projects.json.
+Titles, blurbs, stack lines, and homepage (live demo) URLs can be overridden in .github/projects.json.
 Usage:
   GITHUB_TOKEN=... python projects.py <login> README.md .github/projects.json
   python projects.py --check
@@ -81,6 +81,7 @@ def render(repos, overrides, now):
     blocks = []
     for r in repos:
         o = overrides.get(r["name"], {})
+        r = {**r, "homepageUrl": o.get("homepage") or r["homepageUrl"]}  # override counts as Live
         heading = f"### [{o.get('title', r['name'])}]({r['url']})"
         if r["homepageUrl"]:
             heading += f" · [Live demo ↗]({r['homepageUrl']})"
@@ -113,6 +114,8 @@ def check():
     assert statuses({**base, "latestRelease": {"tagName": "v1.0"}, "isArchived": True}, now) == ["Released v1.0", "Completed"]
     old = {**base, "name": "old", "pushedAt": "2025-06-01T00:00:00Z"}
     assert [r["name"] for r in select([base, old, {**base, "name": "me"}], "me", [], now)] == ["x"]
+    shown = render([base], {"x": {"homepage": "https://h.dev"}}, now)
+    assert "[Live demo ↗](https://h.dev)" in shown and "**Live**" in shown
     assert splice(f"a\n{START}\nold\n{END}\nb", "new") == f"a\n{START}\nnew\n{END}\nb"
     print("ok")
 
