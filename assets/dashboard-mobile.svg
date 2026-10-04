@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="1404" viewBox="0 0 400 1404" role="img" aria-label="@NightServant GitHub activity: 601 contributions in the past year, current streak 2 days (longest 6), 530 commits, 76 pull requests, active on 44 days, top language TypeScript" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
-<title>@NightServant GitHub activity: 601 contributions in the past year, current streak 2 days (longest 6), 530 commits, 76 pull requests, active on 44 days, top language TypeScript</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="1404" viewBox="0 0 400 1404" role="img" aria-label="@NightServant GitHub activity: 601 contributions in the past year, current streak 0 days (longest 6), 530 commits, 76 pull requests, active on 44 days, top language TypeScript" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" style="font-variant-numeric: tabular-nums">
+<title>@NightServant GitHub activity: 601 contributions in the past year, current streak 0 days (longest 6), 530 commits, 76 pull requests, active on 44 days, top language TypeScript</title>
 <style>@media (prefers-color-scheme: dark) { [fill="#f2f2f0"]{fill:#1a1b27} [stroke="#f2f2f0"]{stroke:#1a1b27} [fill="#ffffff"]{fill:#1f2335} [stroke="#ffffff"]{stroke:#1f2335} [fill="#ececea"]{fill:#2a2f45} [stroke="#ececea"]{stroke:#2a2f45} [fill="#0a0a0a"]{fill:#c0caf5} [stroke="#0a0a0a"]{stroke:#c0caf5} [fill="#6b6b6b"]{fill:#a9b1d6} [stroke="#6b6b6b"]{stroke:#a9b1d6} [fill="#9a9a95"]{fill:#737aa2} [stroke="#9a9a95"]{stroke:#737aa2} [fill="#1f7a73"]{fill:#38b2ac} [stroke="#1f7a73"]{stroke:#38b2ac} [fill="#e6f4ea"]{fill:#1e3a33} [stroke="#e6f4ea"]{stroke:#1e3a33} [fill="#1f8a4c"]{fill:#73daca} [stroke="#1f8a4c"]{stroke:#73daca} [fill="#dcebff"]{fill:#1f2e4d} [stroke="#dcebff"]{stroke:#1f2e4d} [fill="#2f66c9"]{fill:#7aa2f7} [stroke="#2f66c9"]{stroke:#7aa2f7} [fill="#fff6d6"]{fill:#3a321c} [stroke="#fff6d6"]{stroke:#3a321c} [fill="#9a7b12"]{fill:#e0af68} [stroke="#9a7b12"]{stroke:#e0af68} }</style>
 <rect width="400" height="1404" rx="16" fill="#f2f2f0"/>
 <g data-od-id="repo-header">
 <text x="16.0" y="36.0" font-size="18" font-weight="600" fill="#0a0a0a" text-anchor="start" >@NightServant</text>
 <text x="16.0" y="58.0" font-size="13" font-weight="400" fill="#6b6b6b" text-anchor="start" >11 public repos · 11 followers · 20 following</text>
-<text x="16.0" y="77.0" font-size="13" font-weight="400" fill="#6b6b6b" text-anchor="start" >Updated Oct 3, 2026</text>
+<text x="16.0" y="77.0" font-size="13" font-weight="400" fill="#6b6b6b" text-anchor="start" >Updated Oct 4, 2026</text>
 </g>
 <g data-od-id="kpi-strip">
 <rect x="16.0" y="96.0" width="178.0" height="92" rx="12" fill="#ffffff" stroke="#ececea"/>
@@ -14,7 +14,7 @@
 <text x="32.0" y="176.0" font-size="12" font-weight="400" fill="#6b6b6b" text-anchor="start" >past year</text>
 <rect x="206.0" y="96.0" width="178.0" height="92" rx="12" fill="#ffffff" stroke="#ececea"/>
 <text x="222.0" y="120.0" font-size="11" font-weight="600" fill="#9a9a95" text-anchor="start" letter-spacing="0.6">CURRENT STREAK</text>
-<text x="222.0" y="154.0" font-size="28" font-weight="600" fill="#0a0a0a" text-anchor="start" >2 d</text>
+<text x="222.0" y="154.0" font-size="28" font-weight="600" fill="#0a0a0a" text-anchor="start" >0 d</text>
 <text x="222.0" y="176.0" font-size="12" font-weight="400" fill="#6b6b6b" text-anchor="start" >longest 6 d</text>
 <rect x="16.0" y="200.0" width="178.0" height="92" rx="12" fill="#ffffff" stroke="#ececea"/>
 <text x="32.0" y="224.0" font-size="11" font-weight="600" fill="#9a9a95" text-anchor="start" letter-spacing="0.6">COMMITS</text>
@@ -48,24 +48,24 @@
 <rect x="110.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="116.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="122.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="128.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="135.0" y="569.2" width="4.2" height="4.8" rx="1.5" fill="#1f7a73"/>
+<rect x="128.8" y="569.2" width="4.2" height="4.8" rx="1.5" fill="#1f7a73"/>
+<rect x="135.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="141.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="147.4" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="153.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="159.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="166.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="172.2" y="566.3" width="4.2" height="7.7" rx="1.5" fill="#1f7a73"/>
-<rect x="178.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="184.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#1f7a73"/>
+<rect x="166.0" y="566.3" width="4.2" height="7.7" rx="1.5" fill="#1f7a73"/>
+<rect x="172.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
+<rect x="178.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#1f7a73"/>
+<rect x="184.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="190.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="196.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="203.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="209.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="215.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="221.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="227.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="234.0" y="563.4" width="4.2" height="10.6" rx="1.5" fill="#1f7a73"/>
+<rect x="227.8" y="563.4" width="4.2" height="10.6" rx="1.5" fill="#1f7a73"/>
+<rect x="234.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="240.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="246.4" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="252.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
@@ -76,17 +76,17 @@
 <rect x="283.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="289.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
 <rect x="295.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="302.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
-<rect x="308.3" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
-<rect x="314.5" y="492.9" width="4.2" height="81.1" rx="1.5" fill="#1f7a73"/>
-<rect x="320.7" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
-<rect x="326.9" y="543.1" width="4.2" height="30.9" rx="1.5" fill="#1f7a73"/>
-<rect x="333.1" y="480.4" width="4.2" height="93.6" rx="1.5" fill="#1f7a73"/>
-<rect x="339.2" y="507.4" width="4.2" height="66.6" rx="1.5" fill="#1f7a73"/>
-<rect x="345.4" y="464.0" width="4.2" height="110.0" rx="1.5" fill="#1f7a73"/>
-<rect x="351.6" y="476.5" width="4.2" height="97.5" rx="1.5" fill="#1f7a73"/>
-<rect x="357.8" y="538.3" width="4.2" height="35.7" rx="1.5" fill="#1f7a73"/>
-<text x="36.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" >Sep 2025</text>
+<rect x="302.1" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
+<rect x="308.3" y="492.9" width="4.2" height="81.1" rx="1.5" fill="#1f7a73"/>
+<rect x="314.5" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#1f7a73"/>
+<rect x="320.7" y="543.1" width="4.2" height="30.9" rx="1.5" fill="#1f7a73"/>
+<rect x="326.9" y="480.4" width="4.2" height="93.6" rx="1.5" fill="#1f7a73"/>
+<rect x="333.1" y="507.4" width="4.2" height="66.6" rx="1.5" fill="#1f7a73"/>
+<rect x="339.2" y="464.0" width="4.2" height="110.0" rx="1.5" fill="#1f7a73"/>
+<rect x="345.4" y="476.5" width="4.2" height="97.5" rx="1.5" fill="#1f7a73"/>
+<rect x="351.6" y="538.3" width="4.2" height="35.7" rx="1.5" fill="#1f7a73"/>
+<rect x="357.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#ececea"/>
+<text x="36.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" >Oct 2025</text>
 <text x="364.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="end" >Oct 2026</text>
 <text x="200.0" y="596.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="middle" >peak 114 / week</text>
 </g>
@@ -174,5 +174,5 @@
 <text x="364.0" y="1318.0" font-size="12" font-weight="400" fill="#6b6b6b" text-anchor="end" >71</text>
 </g>
 <text x="16.0" y="1370.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" data-od-id="provenance">Source: GitHub GraphQL API · public data only</text>
-<text x="16.0" y="1386.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" data-od-id="provenance">generated 2026-10-03 09:11 UTC · dashboard.yml</text>
+<text x="16.0" y="1386.0" font-size="11" font-weight="400" fill="#9a9a95" text-anchor="start" data-od-id="provenance">generated 2026-10-04 09:50 UTC · dashboard.yml</text>
 </svg>
