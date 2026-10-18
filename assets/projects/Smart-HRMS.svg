@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="232" viewBox="0 0 840 232" role="img" aria-label="Smart HRMS" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Smart HRMS</title>
+<clipPath id="c"><rect width="840" height="232" rx="14"/></clipPath>
+<g clip-path="url(#c)"><rect width="840" height="232" fill="#234026"/><rect width="6" height="232" fill="#3f6f33"/></g>
+<text x="32" y="56" font-size="24" font-weight="700" fill="#fafafa">Smart HRMS</text>
+<rect x="758" y="37" width="50" height="22" rx="11" fill="#3f6f33"/><text x="783.0" y="52" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Live</text>
+<text x="32" y="92" font-size="15" fill="#ffffff" fill-opacity="0.84">An HR platform with role-based access for employees, evaluators, HR, and PMT officers,</text>
+<text x="32" y="114" font-size="15" fill="#ffffff" fill-opacity="0.84">backed by four Python modules: rule-based leave and IPCR routing, a linear-regression</text>
+<text x="32" y="136" font-size="15" fill="#ffffff" fill-opacity="0.84">performance predictor, a real-time attendance analytics dashboard, and a training</text>
+<text x="32" y="158" font-size="15" fill="#ffffff" fill-opacity="0.84">recommender. Ships as a desktop app through Electron.</text>
+<line x1="32" y1="178" x2="808" y2="178" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="32" y="200" font-size="13" fill="#ffffff" fill-opacity="0.62">Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</text>
+</svg>

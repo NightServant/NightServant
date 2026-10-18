@@ -21,7 +21,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write        # commits README.md
+      contents: write        # commits README.md and the project cards
     steps:
       - uses: actions/checkout@v4
       - name: Regenerate Featured projects
@@ -35,6 +35,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
+          git add -A assets/projects   # includes cards removed for projects no longer listed
           git diff --cached --quiet && exit 0
           git commit -m "Update featured projects"
           git pull --rebase origin main   # the dashboard workflow may have pushed meanwhile

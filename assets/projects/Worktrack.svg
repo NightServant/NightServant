@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="232" viewBox="0 0 840 232" role="img" aria-label="Worktrack" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Worktrack</title>
+<clipPath id="c"><rect width="840" height="232" rx="14"/></clipPath>
+<g clip-path="url(#c)"><rect width="840" height="232" fill="#18181b"/><rect width="6" height="232" fill="#c2410c"/></g>
+<text x="32" y="56" font-size="24" font-weight="700" fill="#fafafa">Worktrack</text>
+<rect x="758" y="37" width="50" height="22" rx="11" fill="#c2410c"/><text x="783.0" y="52" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Live</text>
+<text x="32" y="92" font-size="15" fill="#ffffff" fill-opacity="0.84">A job-search tracker with an application pipeline, analytics, and a CV builder that keeps</text>
+<text x="32" y="114" font-size="15" fill="#ffffff" fill-opacity="0.84">every version. Row-level security scopes every table to the signed-in user, and a demo mode</text>
+<text x="32" y="136" font-size="15" fill="#ffffff" fill-opacity="0.84">shows the real screens over sample data without an account. Continues a project started by</text>
+<text x="32" y="158" font-size="15" fill="#ffffff" fill-opacity="0.84">Ensues.</text>
+<line x1="32" y1="178" x2="808" y2="178" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="32" y="200" font-size="13" fill="#ffffff" fill-opacity="0.62">Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</text>
+</svg>

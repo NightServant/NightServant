@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="329" viewBox="0 0 400 329" role="img" aria-label="Clover" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Clover</title>
+<clipPath id="c"><rect width="400" height="329" rx="14"/></clipPath>
+<g clip-path="url(#c)"><rect width="400" height="329" fill="#080a09"/><rect width="6" height="329" fill="#008137"/></g>
+<text x="24" y="44" font-size="20" font-weight="700" fill="#fafafa">Clover</text>
+<rect x="24" y="58" width="50" height="22" rx="11" fill="#008137"/><text x="49.0" y="73" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Live</text>
+<text x="24" y="115" font-size="14" fill="#ffffff" fill-opacity="0.84">A 4chan redesign that keeps the boards,</text>
+<text x="24" y="136" font-size="14" fill="#ffffff" fill-opacity="0.84">anonymity, and bump-order threads, and</text>
+<text x="24" y="157" font-size="14" fill="#ffffff" fill-opacity="0.84">rebuilds everything a reader touches: a real</text>
+<text x="24" y="178" font-size="14" fill="#ffffff" fill-opacity="0.84">type scale, OKLCH color tokens, and 107</text>
+<text x="24" y="199" font-size="14" fill="#ffffff" fill-opacity="0.84">test-first components on Radix primitives.</text>
+<text x="24" y="220" font-size="14" fill="#ffffff" fill-opacity="0.84">Board and thread data comes from 4chan's</text>
+<text x="24" y="241" font-size="14" fill="#ffffff" fill-opacity="0.84">read-only JSON API.</text>
+<line x1="24" y1="261" x2="376" y2="261" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="24" y="283" font-size="13" fill="#ffffff" fill-opacity="0.62">Laravel · Inertia.js · React · Tailwind CSS ·</text>
+<text x="24" y="305" font-size="13" fill="#ffffff" fill-opacity="0.62">shadcn/ui · Pest</text>
+</svg>

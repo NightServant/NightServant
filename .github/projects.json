@@ -1,5 +1,5 @@
 {
-  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), or 'palette' ([primary, secondary] hex from the app's own theme; repos without one get neutral gray). Repos listed in 'hidden' never appear.",
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), or 'palette' ([primary, secondary, optional card surface] hex from the app's own theme; surface defaults to secondary; repos without a palette get neutral gray). Repos listed in 'hidden' never appear.",
   "hidden": [],
   "projects": {
     "Worktrack": {
@@ -44,7 +44,8 @@
       "stack": "Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest",
       "palette": [
         "#3b82f6",
-        "#6366f1"
+        "#6366f1",
+        "#121c26"
       ]
     }
   }

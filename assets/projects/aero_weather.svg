@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="210" viewBox="0 0 840 210" role="img" aria-label="AeroWeather" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>AeroWeather</title>
+<clipPath id="c"><rect width="840" height="210" rx="14"/></clipPath>
+<g clip-path="url(#c)"><rect width="840" height="210" fill="#121c26"/><rect width="6" height="210" fill="#3b82f6"/></g>
+<text x="32" y="56" font-size="24" font-weight="700" fill="#fafafa">AeroWeather</text>
+<rect x="758" y="37" width="50" height="22" rx="11" fill="#3b82f6"/><text x="783.0" y="52" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Live</text>
+<text x="32" y="92" font-size="15" fill="#ffffff" fill-opacity="0.84">A single-page weather dashboard with current conditions, air quality, and a two-week outlook</text>
+<text x="32" y="114" font-size="15" fill="#ffffff" fill-opacity="0.84">for any city, plus saved places and an interactive map. No account and no backend:</text>
+<text x="32" y="136" font-size="15" fill="#ffffff" fill-opacity="0.84">preferences stay on the device.</text>
+<line x1="32" y1="156" x2="808" y2="156" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="32" y="178" font-size="13" fill="#ffffff" fill-opacity="0.62">Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</text>
+</svg>

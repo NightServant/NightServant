@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="350" viewBox="0 0 400 350" role="img" aria-label="Smart HRMS" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Smart HRMS</title>
+<clipPath id="c"><rect width="400" height="350" rx="14"/></clipPath>
+<g clip-path="url(#c)"><rect width="400" height="350" fill="#234026"/><rect width="6" height="350" fill="#3f6f33"/></g>
+<text x="24" y="44" font-size="20" font-weight="700" fill="#fafafa">Smart HRMS</text>
+<rect x="24" y="58" width="50" height="22" rx="11" fill="#3f6f33"/><text x="49.0" y="73" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Live</text>
+<text x="24" y="115" font-size="14" fill="#ffffff" fill-opacity="0.84">An HR platform with role-based access for</text>
+<text x="24" y="136" font-size="14" fill="#ffffff" fill-opacity="0.84">employees, evaluators, HR, and PMT officers,</text>
+<text x="24" y="157" font-size="14" fill="#ffffff" fill-opacity="0.84">backed by four Python modules: rule-based</text>
+<text x="24" y="178" font-size="14" fill="#ffffff" fill-opacity="0.84">leave and IPCR routing, a linear-regression</text>
+<text x="24" y="199" font-size="14" fill="#ffffff" fill-opacity="0.84">performance predictor, a real-time</text>
+<text x="24" y="220" font-size="14" fill="#ffffff" fill-opacity="0.84">attendance analytics dashboard, and a</text>
+<text x="24" y="241" font-size="14" fill="#ffffff" fill-opacity="0.84">training recommender. Ships as a desktop app</text>
+<text x="24" y="262" font-size="14" fill="#ffffff" fill-opacity="0.84">through Electron.</text>
+<line x1="24" y1="282" x2="376" y2="282" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="24" y="304" font-size="13" fill="#ffffff" fill-opacity="0.62">Laravel 12 · React 19 · Inertia.js · MySQL ·</text>
+<text x="24" y="326" font-size="13" fill="#ffffff" fill-opacity="0.62">Python · Electron · Pest</text>
+</svg>
