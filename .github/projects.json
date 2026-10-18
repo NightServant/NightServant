@@ -1,31 +1,51 @@
 {
-  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, or live demo URL ('homepage'). Repos listed in 'hidden' never appear.",
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), or 'palette' ([primary, secondary] hex from the app's own theme; repos without one get neutral gray). Repos listed in 'hidden' never appear.",
   "hidden": [],
   "projects": {
     "Worktrack": {
       "blurb": "A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by [Ensues](https://github.com/Ensues).",
-      "stack": "Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest"
+      "stack": "Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest",
+      "palette": [
+        "#c2410c",
+        "#18181b"
+      ]
     },
     "Smart-HRMS": {
       "title": "Smart HRMS",
       "homepage": "https://smart-hrms.onrender.com/",
       "blurb": "An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.",
-      "stack": "Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest"
+      "stack": "Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest",
+      "palette": [
+        "#3f6f33",
+        "#234026"
+      ]
     },
     "baguio-city-3d": {
       "title": "Baguio 3D",
       "blurb": "An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.",
-      "stack": "Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis"
+      "stack": "Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis",
+      "palette": [
+        "#8c2318",
+        "#1c1a17"
+      ]
     },
     "4chan-redesign": {
       "title": "Clover",
       "blurb": "A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.",
-      "stack": "Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest"
+      "stack": "Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest",
+      "palette": [
+        "#008137",
+        "#080a09"
+      ]
     },
     "aero_weather": {
       "title": "AeroWeather",
       "blurb": "A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device.",
-      "stack": "Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest"
+      "stack": "Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest",
+      "palette": [
+        "#3b82f6",
+        "#6366f1"
+      ]
     }
   }
 }

@@ -1,12 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=38B2AC&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a0aec0" width="100%" alt="Elijah Gabe Cervantes (NightServant), frontend developer moving into full-stack" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=wave&color=0:262626%2C100:404040&height=180&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=fafafa&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a3a3a3" />
+  <img src="https://capsule-render.vercel.app/api?type=wave&color=0:0a0a0a,100:262626&height=180&section=header&text=Elijah%20Gabe%20Cervantes&fontSize=42&fontColor=fafafa&fontAlignY=38&desc=NightServant%20•%20Frontend%20Developer%20%E2%86%92%20Full-Stack%20in%20Progress&descAlignY=58&descSize=16&descColor=a3a3a3" width="100%" alt="Elijah Gabe Cervantes (NightServant), frontend developer moving into full-stack" />
+</picture>
 
 ### Frontend developer building fast, accessible React and Next.js apps, and shipping them full-stack.
 
-<a href="https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
-<a href="mailto:egabecervantes@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Elijah" /></a>
-<a href="https://worktrack-jobs.vercel.app"><img src="https://img.shields.io/badge/Live_demo-Worktrack-1F7A73?style=for-the-badge&logo=vercel&logoColor=white" alt="Live demo of Worktrack" /></a>
+<a href="https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/"><img src="https://img.shields.io/badge/LinkedIn-404040?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
+<a href="mailto:egabecervantes@gmail.com"><img src="https://img.shields.io/badge/Email-404040?style=flat-square&logo=gmail&logoColor=white" alt="Email Elijah" /></a>
+<a href="https://worktrack-jobs.vercel.app"><img src="https://img.shields.io/badge/Live_demo-Worktrack-404040?style=flat-square&labelColor=262626&logo=vercel&logoColor=white" alt="Live demo of Worktrack" /></a>
 
 </div>
 
@@ -25,68 +28,66 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
 ## Featured projects
 
 <!-- PROJECTS:START -->
-### [Worktrack](https://github.com/NightServant/Worktrack) · [Live demo ↗](https://worktrack-jobs.vercel.app/)
+### Worktrack
 
 A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by [Ensues](https://github.com/Ensues).
 
-<sub>**Live** — Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</sub>
+<img src="https://img.shields.io/badge/Live-c2410c?style=flat-square" alt="Status: Live" /> <a href="https://worktrack-jobs.vercel.app/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-18181b?style=flat-square" alt="Worktrack live demo" /></a> <a href="https://github.com/NightServant/Worktrack"><img src="https://img.shields.io/badge/Source-18181b?style=flat-square&logo=github&logoColor=white" alt="Worktrack source code" /></a>
 
-### [Clover](https://github.com/NightServant/4chan-redesign) · [Live demo ↗](https://clover-lac.vercel.app)
+<sub>Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest</sub>
+
+### Clover
 
 A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.
 
-<sub>**Live** — Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
+<img src="https://img.shields.io/badge/Live-008137?style=flat-square" alt="Status: Live" /> <a href="https://clover-lac.vercel.app"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-080a09?style=flat-square" alt="Clover live demo" /></a> <a href="https://github.com/NightServant/4chan-redesign"><img src="https://img.shields.io/badge/Source-080a09?style=flat-square&logo=github&logoColor=white" alt="Clover source code" /></a>
 
-### [Baguio 3D](https://github.com/NightServant/baguio-city-3d)
+<sub>Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest</sub>
+
+### Baguio 3D
 
 An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.
 
-<sub>**In development** — Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis</sub>
+<img src="https://img.shields.io/badge/In%20development-8c2318?style=flat-square" alt="Status: In development" /> <a href="https://github.com/NightServant/baguio-city-3d"><img src="https://img.shields.io/badge/Source-1c1a17?style=flat-square&logo=github&logoColor=white" alt="Baguio 3D source code" /></a>
 
-### [AeroWeather](https://github.com/NightServant/aero_weather) · [Live demo ↗](https://aero-weather-nightservants-projects.vercel.app/)
+<sub>Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis</sub>
+
+### AeroWeather
 
 A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device.
 
-<sub>**Live** — Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</sub>
+<img src="https://img.shields.io/badge/Live-3b82f6?style=flat-square" alt="Status: Live" /> <a href="https://aero-weather-nightservants-projects.vercel.app/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-6366f1?style=flat-square" alt="AeroWeather live demo" /></a> <a href="https://github.com/NightServant/aero_weather"><img src="https://img.shields.io/badge/Source-6366f1?style=flat-square&logo=github&logoColor=white" alt="AeroWeather source code" /></a>
 
-### [Smart HRMS](https://github.com/NightServant/Smart-HRMS) · [Live demo ↗](https://smart-hrms.onrender.com/)
+<sub>Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest</sub>
+
+### Smart HRMS
 
 An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.
 
-<sub>**Live** — Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
+<img src="https://img.shields.io/badge/Live-3f6f33?style=flat-square" alt="Status: Live" /> <a href="https://smart-hrms.onrender.com/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-234026?style=flat-square" alt="Smart HRMS live demo" /></a> <a href="https://github.com/NightServant/Smart-HRMS"><img src="https://img.shields.io/badge/Source-234026?style=flat-square&logo=github&logoColor=white" alt="Smart HRMS source code" /></a>
+
+<sub>Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest</sub>
 <!-- PROJECTS:END -->
 
 More, including earlier coursework, in my [repositories](https://github.com/NightServant?tab=repositories).
 
 ## Tech stack
 
-**Languages:** TypeScript, JavaScript, PHP, Python, Java, SQL
+**Languages**
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts%2Cjs%2Cphp%2Cpy%2Cjava&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=ts,js,php,py,java&theme=light" height="40" alt="TypeScript, JavaScript, PHP, Python, and Java icons" />
-</picture>
+<img src="https://img.shields.io/badge/TypeScript-404040?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/JavaScript-404040?style=flat-square&logo=javascript&logoColor=white" alt="JavaScript" /> <img src="https://img.shields.io/badge/PHP-404040?style=flat-square&logo=php&logoColor=white" alt="PHP" /> <img src="https://img.shields.io/badge/Python-404040?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Java-404040?style=flat-square&logo=openjdk&logoColor=white" alt="Java" /> <img src="https://img.shields.io/badge/SQL-404040?style=flat-square" alt="SQL" />
 
-**Frontend:** React, Next.js, Tailwind CSS, Vite, Three.js, plus Inertia.js and shadcn/ui on Radix
+**Frontend**
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react%2Cnextjs%2Ctailwind%2Cvite%2Cthreejs&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,threejs&theme=light" height="40" alt="React, Next.js, Tailwind CSS, Vite, and Three.js icons" />
-</picture>
+<img src="https://img.shields.io/badge/React-404040?style=flat-square&logo=react&logoColor=white" alt="React" /> <img src="https://img.shields.io/badge/Next.js-404040?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" /> <img src="https://img.shields.io/badge/Tailwind%20CSS-404040?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" /> <img src="https://img.shields.io/badge/Vite-404040?style=flat-square&logo=vite&logoColor=white" alt="Vite" /> <img src="https://img.shields.io/badge/Three.js-404040?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js" /> <img src="https://img.shields.io/badge/Inertia.js-404040?style=flat-square&logo=inertia&logoColor=white" alt="Inertia.js" /> <img src="https://img.shields.io/badge/shadcn%2Fui-404040?style=flat-square&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
 
-**Backend and data:** Laravel, Supabase, PostgreSQL / PostGIS, MySQL, Prisma, Redis
+**Backend and data**
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=laravel%2Csupabase%2Cpostgres%2Cmysql%2Cprisma%2Credis&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=laravel,supabase,postgres,mysql,prisma,redis&theme=light" height="40" alt="Laravel, Supabase, PostgreSQL, MySQL, Prisma, and Redis icons" />
-</picture>
+<img src="https://img.shields.io/badge/Laravel-404040?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" /> <img src="https://img.shields.io/badge/Supabase-404040?style=flat-square&logo=supabase&logoColor=white" alt="Supabase" /> <img src="https://img.shields.io/badge/PostgreSQL-404040?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/MySQL-404040?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" /> <img src="https://img.shields.io/badge/Prisma-404040?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" /> <img src="https://img.shields.io/badge/Redis-404040?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
 
-**Testing, desktop, and tooling:** Vitest and Pest, Electron, Figma, Git, Vercel, with Claude Code and Codex for AI-assisted work
+**Testing, desktop, and tooling**
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vitest%2Celectron%2Cfigma%2Cgit%2Cvercel&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=vitest,electron,figma,git,vercel&theme=light" height="40" alt="Vitest, Electron, Figma, Git, and Vercel icons" />
-</picture>
+<img src="https://img.shields.io/badge/Vitest-404040?style=flat-square&logo=vitest&logoColor=white" alt="Vitest" /> <img src="https://img.shields.io/badge/Pest-404040?style=flat-square" alt="Pest" /> <img src="https://img.shields.io/badge/Electron-404040?style=flat-square&logo=electron&logoColor=white" alt="Electron" /> <img src="https://img.shields.io/badge/Figma-404040?style=flat-square&logo=figma&logoColor=white" alt="Figma" /> <img src="https://img.shields.io/badge/Git-404040?style=flat-square&logo=git&logoColor=white" alt="Git" /> <img src="https://img.shields.io/badge/Vercel-404040?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" /> <img src="https://img.shields.io/badge/Claude%20Code-404040?style=flat-square&logo=claude&logoColor=white" alt="Claude Code" /> <img src="https://img.shields.io/badge/Codex-404040?style=flat-square" alt="Codex" />
 
 ## GitHub activity
 
@@ -103,4 +104,4 @@ More, including earlier coursework, in my [repositories](https://github.com/Nigh
 
 The quickest way to reach me is [email](mailto:egabecervantes@gmail.com). I'm also on [LinkedIn](https://www.linkedin.com/in/elijah-gabe-cervantes-0252b4340/).
 
-<img src="https://komarev.com/ghpvc/?username=NightServant&label=Profile%20views&color=1F7A73&style=flat-square" alt="Profile view count" />
+<img src="https://hits.sh/github.com/NightServant.svg?label=Profile%20views&color=525252&labelColor=262626&style=flat-square" alt="Profile view count" />

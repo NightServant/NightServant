@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 
 QUERY = """
@@ -33,6 +34,7 @@ query($login: String!) {
 
 START, END = "<!-- PROJECTS:START -->", "<!-- PROJECTS:END -->"
 MAX_PROJECTS = 6
+NEUTRAL = ["#737373", "#404040"]  # palette for repos without one in projects.json
 
 
 def fetch(login, token):
@@ -77,19 +79,30 @@ def select(repos, login, hidden, now):
     return keep[:MAX_PROJECTS]  # already newest-created first
 
 
+def badge(text, color, logo=None):
+    label = urllib.parse.quote(text.replace("-", "--").replace("_", "__"), safe="")
+    url = f"https://img.shields.io/badge/{label}-{color.lstrip('#')}?style=flat-square"
+    return url + (f"&logo={logo}&logoColor=white" if logo else "")
+
+
 def render(repos, overrides, now):
+    """Each project is color-coded with its own app's palette: status in the primary color,
+    links in the secondary. Links are badges because GitHub forces text links to blue."""
     blocks = []
     for r in repos:
         o = overrides.get(r["name"], {})
         r = {**r, "homepageUrl": o.get("homepage") or r["homepageUrl"]}  # override counts as Live
-        heading = f"### [{o.get('title', r['name'])}]({r['url']})"
+        title = o.get("title", r["name"])
+        primary, secondary = o.get("palette", NEUTRAL)
+        status = " · ".join(statuses(r, now))
+        links = [f'<img src="{badge(status, primary)}" alt="Status: {status}" />']
         if r["homepageUrl"]:
-            heading += f" · [Live demo ↗]({r['homepageUrl']})"
+            links.append(f'<a href="{r["homepageUrl"]}"><img src="{badge("Live demo ↗", secondary)}" alt="{title} live demo" /></a>')
+        links.append(f'<a href="{r["url"]}"><img src="{badge("Source", secondary, "github")}" alt="{title} source code" /></a>')
         topics = [t["topic"]["name"] for t in r["repositoryTopics"]["nodes"] if t["topic"]["name"] != "completed"]
         stack = o.get("stack") or " · ".join(topics[:6]) or (r["primaryLanguage"] or {}).get("name", "")
-        meta = " — ".join(filter(None, [f"**{' · '.join(statuses(r, now))}**", stack]))
         blurb = o.get("blurb") or r["description"] or ""
-        blocks.append("\n\n".join(filter(None, [heading, blurb, f"<sub>{meta}</sub>"])))
+        blocks.append("\n\n".join(filter(None, [f"### {title}", blurb, " ".join(links), stack and f"<sub>{stack}</sub>"])))
     return "\n\n".join(blocks)
 
 
@@ -114,8 +127,10 @@ def check():
     assert statuses({**base, "latestRelease": {"tagName": "v1.0"}, "isArchived": True}, now) == ["Released v1.0", "Completed"]
     old = {**base, "name": "old", "pushedAt": "2025-06-01T00:00:00Z"}
     assert [r["name"] for r in select([base, old, {**base, "name": "me"}], "me", [], now)] == ["x"]
-    shown = render([base], {"x": {"homepage": "https://h.dev"}}, now)
-    assert "[Live demo ↗](https://h.dev)" in shown and "**Live**" in shown
+    shown = render([base], {"x": {"homepage": "https://h.dev", "palette": ["#c2410c", "#18181b"]}}, now)
+    assert '<a href="https://h.dev">' in shown and "badge/Live-c2410c" in shown and "Live%20demo%20%E2%86%97-18181b" in shown
+    assert "badge/In%20development-737373" in render([base], {}, now)          # no palette -> neutral
+    assert badge("New · v1-rc_2", "#000") == "https://img.shields.io/badge/New%20%C2%B7%20v1--rc__2-000?style=flat-square"
     assert splice(f"a\n{START}\nold\n{END}\nb", "new") == f"a\n{START}\nnew\n{END}\nb"
     print("ok")
 

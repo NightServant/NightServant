@@ -26,8 +26,8 @@ query($login: String!, $pr: String!) {
       totalCount
       nodes {
         name pushedAt
-        primaryLanguage { name color }
-        languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
+        primaryLanguage { name }
+        languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } }
       }
     }
     contributionsCollection {
@@ -43,16 +43,16 @@ query($login: String!, $pr: String!) {
 }"""
 
 THEMES = {
-    # Soft Paper tokens from the github-dashboard skill template.
-    "light": dict(canvas="#f2f2f0", surface="#ffffff", border="#ececea", ink="#0a0a0a",
-                  text2="#6b6b6b", text3="#9a9a95", accent="#1f7a73", track="#ececea",
-                  pill_bg="#e6f4ea", pill_fg="#1f8a4c", blue_bg="#dcebff", blue_fg="#2f66c9",
-                  amber_bg="#fff6d6", amber_fg="#9a7b12"),
-    # Tokyo Night tokens, matching the rest of the README.
-    "dark": dict(canvas="#1a1b27", surface="#1f2335", border="#2a2f45", ink="#c0caf5",
-                 text2="#a9b1d6", text3="#737aa2", accent="#38b2ac", track="#2a2f45",
-                 pill_bg="#1e3a33", pill_fg="#73daca", blue_bg="#1f2e4d", blue_fg="#7aa2f7",
-                 amber_bg="#3a321c", amber_fg="#e0af68"),
+    # Monochrome: black, gray, white. Neutral grays only (no blue tint), so light and dark read
+    # as the same palette inverted. lang0..lang4 shade the top languages by rank.
+    "light": dict(canvas="#f5f5f5", surface="#ffffff", border="#e5e5e5", ink="#0a0a0a",
+                  text2="#525252", text3="#8a8a8a", accent="#0a0a0a", track="#e5e5e5",
+                  pill_bg="#f0f0f0", pill_fg="#262626", tag_bg="#f0f0f0", tag_fg="#262626",
+                  lang0="#0a0a0a", lang1="#404040", lang2="#737373", lang3="#a3a3a3", lang4="#c4c4c4"),
+    "dark": dict(canvas="#0a0a0a", surface="#141414", border="#262626", ink="#fafafa",
+                 text2="#a3a3a3", text3="#6e6e6e", accent="#fafafa", track="#262626",
+                 pill_bg="#262626", pill_fg="#e5e5e5", tag_bg="#262626", tag_fg="#e5e5e5",
+                 lang0="#fafafa", lang1="#d4d4d4", lang2="#a3a3a3", lang3="#7a7a7a", lang4="#525252"),
 }
 
 GAP = 16
@@ -106,10 +106,9 @@ def summarize(d):
     for r in repos:
         for e in r["languages"]["edges"]:
             n = e["node"]
-            size, color = langs.get(n["name"], (0, n["color"]))
-            langs[n["name"]] = (size + e["size"], color or "#9a9a95")
-    total_bytes = sum(s for s, _ in langs.values()) or 1
-    top_langs = sorted(langs.items(), key=lambda kv: -kv[1][0])[:5]
+            langs[n["name"]] = langs.get(n["name"], 0) + e["size"]
+    total_bytes = sum(langs.values()) or 1
+    top_langs = sorted(langs.items(), key=lambda kv: -kv[1])[:5]
     return dict(
         login=u["login"],
         followers=u["followers"]["totalCount"], following=u["following"]["totalCount"],
@@ -122,7 +121,7 @@ def summarize(d):
         weeks=[sum(x["contributionCount"] for x in w["contributionDays"])
                for w in cc["contributionCalendar"]["weeks"]],
         first_day=days[0]["date"], last_day=days[-1]["date"],
-        langs=[(n, s / total_bytes, c) for n, (s, c) in top_langs],
+        langs=[(n, size / total_bytes) for n, size in top_langs],
         active=[(c["repository"], c["contributions"]["totalCount"]) for c in cc["commitContributionsByRepository"]
                 if not c["repository"]["isPrivate"] and c["repository"]["name"] != u["login"]][:5],
     )
@@ -230,12 +229,12 @@ def languages(out, x, y, w, h, s):
     bx, bw = x + 20, w - 40
     out.append(f'<rect x="{bx:.1f}" y="{y + 48:.1f}" width="{bw:.1f}" height="8" rx="4" fill="{{track}}"/>')
     off = 0
-    for name, share, color in s["langs"]:
-        out.append(f'<rect x="{bx + off:.1f}" y="{y + 48:.1f}" width="{max(bw * share, 1):.1f}" height="8" fill="{color}"/>')
+    for i, (name, share) in enumerate(s["langs"]):
+        out.append(f'<rect x="{bx + off:.1f}" y="{y + 48:.1f}" width="{max(bw * share, 1):.1f}" height="8" fill="{{lang{i}}}"/>')
         off += bw * share
-    for i, (name, share, color) in enumerate(s["langs"]):
+    for i, (name, share) in enumerate(s["langs"]):
         ly = y + 84 + i * 28
-        out.append(f'<circle cx="{bx + 5:.1f}" cy="{ly - 4:.1f}" r="5" fill="{color}"/>')
+        out.append(f'<circle cx="{bx + 5:.1f}" cy="{ly - 4:.1f}" r="5" fill="{{lang{i}}}"/>')
         out.append(text(bx + 18, ly, name, 13))
         out.append(text(bx + bw, ly, f"{share * 100:.1f}%", 13, "text2", anchor="end"))
     out.append("</g>")
@@ -256,7 +255,7 @@ def repos(out, x, y, w, h, s, lang_col):
         out.append(text(x + 20, ry + 21, clip(r["name"], 34 if lang_col else 22), 13, "ink", 500))
         if lang_col:
             lang = r["primaryLanguage"]
-            out.append(pill(x + 310, ry + 6, lang["name"], "blue") if lang else text(x + 310, ry + 21, "—", 13, "text3"))
+            out.append(pill(x + 310, ry + 6, lang["name"], "tag") if lang else text(x + 310, ry + 21, "—", 13, "text3"))
         out.append(text(x + w - 120, ry + 21, fmt(commits), 13, "ink", anchor="end"))
         pushed = dt.datetime.fromisoformat(r["pushedAt"].replace("Z", "+00:00"))
         out.append(text(x + w - 20, ry + 21, f"{pushed:%b %-d, %Y}", 13, "text2", anchor="end"))
