@@ -24,6 +24,10 @@ jobs:
       contents: write        # commits README.md and the project cards
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install fonttools==4.67.0   # measures embedded app fonts for text wrapping
       - name: Regenerate Featured projects
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

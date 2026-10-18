@@ -1,5 +1,5 @@
 {
-  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), or 'palette' ([primary, secondary, optional card surface] hex from the app's own theme; surface defaults to secondary; repos without a palette get neutral gray). Repos listed in 'hidden' never appear.",
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), 'palette' ([badge primary, badge secondary, card surface, card accent]: badges use the app's light-theme colors, the card shows its dark theme; surface defaults to secondary, accent to primary), or 'fonts' ({title, body, stack} as 'Google Font Family:weight'; stack defaults to body; unset = system font). Repos listed in 'hidden' never appear.",
   "hidden": [],
   "projects": {
     "Worktrack": {
@@ -7,8 +7,14 @@
       "stack": "Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest",
       "palette": [
         "#c2410c",
-        "#18181b"
-      ]
+        "#1e293b",
+        "#020817",
+        "#fb923c"
+      ],
+      "fonts": {
+        "title": "Arimo:700",
+        "body": "Arimo:400"
+      }
     },
     "Smart-HRMS": {
       "title": "Smart HRMS",
@@ -17,8 +23,14 @@
       "stack": "Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest",
       "palette": [
         "#3f6f33",
-        "#234026"
-      ]
+        "#0e1b3a",
+        "#0a1630",
+        "#91c383"
+      ],
+      "fonts": {
+        "title": "Montserrat:700",
+        "body": "Montserrat:400"
+      }
     },
     "baguio-city-3d": {
       "title": "Baguio 3D",
@@ -26,8 +38,15 @@
       "stack": "Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis",
       "palette": [
         "#8c2318",
-        "#1c1a17"
-      ]
+        "#1c1a17",
+        "#1c1a17",
+        "#d98a7b"
+      ],
+      "fonts": {
+        "title": "Archivo:700",
+        "body": "Archivo:400",
+        "stack": "Geist Mono:400"
+      }
     },
     "4chan-redesign": {
       "title": "Clover",
@@ -35,8 +54,14 @@
       "stack": "Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest",
       "palette": [
         "#008137",
-        "#080a09"
-      ]
+        "#080a09",
+        "#080a09",
+        "#34c76f"
+      ],
+      "fonts": {
+        "title": "Space Grotesk:700",
+        "body": "Inter:400"
+      }
     },
     "aero_weather": {
       "title": "AeroWeather",
@@ -45,8 +70,13 @@
       "palette": [
         "#3b82f6",
         "#6366f1",
-        "#121c26"
-      ]
+        "#121c26",
+        "#3b82f6"
+      ],
+      "fonts": {
+        "title": "Poppins:600",
+        "body": "Poppins:400"
+      }
     }
   }
 }

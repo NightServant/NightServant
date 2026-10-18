@@ -33,7 +33,7 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
   <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack.svg" width="100%" alt="Worktrack (Live). A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by Ensues. Built with Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest." />
 </picture>
 
-<a href="https://worktrack-jobs.vercel.app/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-c2410c?style=flat-square" alt="Worktrack live demo" /></a> <a href="https://github.com/NightServant/Worktrack"><img src="https://img.shields.io/badge/Source-18181b?style=flat-square&logo=github&logoColor=white" alt="Worktrack source code" /></a>
+<a href="https://worktrack-jobs.vercel.app/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-c2410c?style=flat-square" alt="Worktrack live demo" /></a> <a href="https://github.com/NightServant/Worktrack"><img src="https://img.shields.io/badge/Source-1e293b?style=flat-square&logo=github&logoColor=white" alt="Worktrack source code" /></a>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/4chan-redesign-mobile.svg" />
@@ -61,7 +61,7 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
   <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Smart-HRMS.svg" width="100%" alt="Smart HRMS (Live). An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron. Built with Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest." />
 </picture>
 
-<a href="https://smart-hrms.onrender.com/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-3f6f33?style=flat-square" alt="Smart HRMS live demo" /></a> <a href="https://github.com/NightServant/Smart-HRMS"><img src="https://img.shields.io/badge/Source-234026?style=flat-square&logo=github&logoColor=white" alt="Smart HRMS source code" /></a>
+<a href="https://smart-hrms.onrender.com/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-3f6f33?style=flat-square" alt="Smart HRMS live demo" /></a> <a href="https://github.com/NightServant/Smart-HRMS"><img src="https://img.shields.io/badge/Source-0e1b3a?style=flat-square&logo=github&logoColor=white" alt="Smart HRMS source code" /></a>
 <!-- PROJECTS:END -->
 
 More, including earlier coursework, in my [repositories](https://github.com/NightServant?tab=repositories).
