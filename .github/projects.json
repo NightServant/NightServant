@@ -1,16 +1,30 @@
 {
-  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), 'palette' ([badge primary, badge secondary, card surface, card accent]: badges use the app's light-theme colors, the card shows its dark theme; surface defaults to secondary, accent to primary), or 'fonts' ({title, body, stack} as 'Google Font Family:weight'; stack defaults to body; unset = system font). Repos listed in 'hidden' never appear.",
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), 'palette' ({badge: [primary, secondary] for the link badges, light: {...}, dark: {...}} where each theme has surface/border/text/muted/accent taken from the app's own light and dark CSS tokens; text and muted are nudged to WCAG AA if needed; unset = neutral gray), or 'fonts' ({title, body, stack} as 'Google Font Family:weight'; stack defaults to body; unset = system font). Repos listed in 'hidden' never appear.",
   "hidden": [],
   "projects": {
     "Worktrack": {
       "blurb": "A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by [Ensues](https://github.com/Ensues).",
       "stack": "Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest",
-      "palette": [
-        "#c2410c",
-        "#1e293b",
-        "#020817",
-        "#fb923c"
-      ],
+      "palette": {
+        "badge": [
+          "#c2410c",
+          "#1e293b"
+        ],
+        "light": {
+          "surface": "#ffffff",
+          "border": "#e2e8f0",
+          "text": "#020817",
+          "muted": "#64748b",
+          "accent": "#c2410c"
+        },
+        "dark": {
+          "surface": "#020817",
+          "border": "#1e293b",
+          "text": "#f8fafc",
+          "muted": "#94a3b8",
+          "accent": "#fb923c"
+        }
+      },
       "fonts": {
         "title": "Arimo:700",
         "body": "Arimo:400"
@@ -21,12 +35,26 @@
       "homepage": "https://smart-hrms.onrender.com/",
       "blurb": "An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron.",
       "stack": "Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest",
-      "palette": [
-        "#3f6f33",
-        "#0e1b3a",
-        "#0a1630",
-        "#91c383"
-      ],
+      "palette": {
+        "badge": [
+          "#3f6f33",
+          "#0e1b3a"
+        ],
+        "light": {
+          "surface": "#e3efda",
+          "border": "#b8ccb0",
+          "text": "#1f3321",
+          "muted": "#5a7256",
+          "accent": "#3f6f33"
+        },
+        "dark": {
+          "surface": "#0a1630",
+          "border": "#1e3350",
+          "text": "#ededec",
+          "muted": "#b8dba8",
+          "accent": "#91c383"
+        }
+      },
       "fonts": {
         "title": "Montserrat:700",
         "body": "Montserrat:400"
@@ -36,12 +64,26 @@
       "title": "Baguio 3D",
       "blurb": "An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys.",
       "stack": "Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis",
-      "palette": [
-        "#8c2318",
-        "#1c1a17",
-        "#1c1a17",
-        "#d98a7b"
-      ],
+      "palette": {
+        "badge": [
+          "#8c2318",
+          "#2b221c"
+        ],
+        "light": {
+          "surface": "#f5f0e6",
+          "border": "#d2cbbf",
+          "text": "#16130f",
+          "muted": "#635d54",
+          "accent": "#8c2318"
+        },
+        "dark": {
+          "surface": "#2b221c",
+          "border": "#5e4d41",
+          "text": "#f3ece1",
+          "muted": "#c9b8a5",
+          "accent": "#d98a7b"
+        }
+      },
       "fonts": {
         "title": "Archivo:700",
         "body": "Archivo:400",
@@ -52,12 +94,26 @@
       "title": "Clover",
       "blurb": "A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API.",
       "stack": "Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest",
-      "palette": [
-        "#008137",
-        "#080a09",
-        "#080a09",
-        "#34c76f"
-      ],
+      "palette": {
+        "badge": [
+          "#008137",
+          "#080a09"
+        ],
+        "light": {
+          "surface": "#f6f8f6",
+          "border": "#c4cec7",
+          "text": "#0d1411",
+          "muted": "#4c574f",
+          "accent": "#008137"
+        },
+        "dark": {
+          "surface": "#080a09",
+          "border": "#2e3832",
+          "text": "#f2f5f2",
+          "muted": "#9aa39c",
+          "accent": "#34c76f"
+        }
+      },
       "fonts": {
         "title": "Space Grotesk:700",
         "body": "Inter:400"
@@ -67,12 +123,26 @@
       "title": "AeroWeather",
       "blurb": "A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device.",
       "stack": "Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest",
-      "palette": [
-        "#3b82f6",
-        "#6366f1",
-        "#121c26",
-        "#3b82f6"
-      ],
+      "palette": {
+        "badge": [
+          "#3b82f6",
+          "#6366f1"
+        ],
+        "light": {
+          "surface": "#ffffff",
+          "border": "#e5e5e5",
+          "text": "#0a0a0a",
+          "muted": "#525252",
+          "accent": "#3b82f6"
+        },
+        "dark": {
+          "surface": "#121c26",
+          "border": "#353e47",
+          "text": "#f3f5f7",
+          "muted": "#b3b8bc",
+          "accent": "#3b82f6"
+        }
+      },
       "fonts": {
         "title": "Poppins:600",
         "body": "Poppins:400"

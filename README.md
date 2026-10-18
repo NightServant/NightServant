@@ -30,35 +30,40 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
 <!-- PROJECTS:START -->
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack-mobile.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack.svg" width="100%" alt="Worktrack (Live). A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by Ensues. Built with Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack-light.svg" width="100%" alt="Worktrack (Live). A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by Ensues. Built with Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest." />
 </picture>
 
 <a href="https://worktrack-jobs.vercel.app/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-c2410c?style=flat-square" alt="Worktrack live demo" /></a> <a href="https://github.com/NightServant/Worktrack"><img src="https://img.shields.io/badge/Source-1e293b?style=flat-square&logo=github&logoColor=white" alt="Worktrack source code" /></a>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/4chan-redesign-mobile.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/4chan-redesign.svg" width="100%" alt="Clover (Live). A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API. Built with Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/4chan-redesign-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/4chan-redesign-light.svg" width="100%" alt="Clover (Live). A 4chan redesign that keeps the boards, anonymity, and bump-order threads, and rebuilds everything a reader touches: a real type scale, OKLCH color tokens, and 107 test-first components on Radix primitives. Board and thread data comes from 4chan's read-only JSON API. Built with Laravel · Inertia.js · React · Tailwind CSS · shadcn/ui · Pest." />
 </picture>
 
 <a href="https://clover-lac.vercel.app"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-008137?style=flat-square" alt="Clover live demo" /></a> <a href="https://github.com/NightServant/4chan-redesign"><img src="https://img.shields.io/badge/Source-080a09?style=flat-square&logo=github&logoColor=white" alt="Clover source code" /></a>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-mobile.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d.svg" width="100%" alt="Baguio 3D (In development). An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys. Built with Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-light.svg" width="100%" alt="Baguio 3D (In development). An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys. Built with Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis." />
 </picture>
 
-<a href="https://github.com/NightServant/baguio-city-3d"><img src="https://img.shields.io/badge/Source-1c1a17?style=flat-square&logo=github&logoColor=white" alt="Baguio 3D source code" /></a>
+<a href="https://github.com/NightServant/baguio-city-3d"><img src="https://img.shields.io/badge/Source-2b221c?style=flat-square&logo=github&logoColor=white" alt="Baguio 3D source code" /></a>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/aero_weather-mobile.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/aero_weather.svg" width="100%" alt="AeroWeather (Live). A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device. Built with Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/aero_weather-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/aero_weather-light.svg" width="100%" alt="AeroWeather (Live). A single-page weather dashboard with current conditions, air quality, and a two-week outlook for any city, plus saved places and an interactive map. No account and no backend: preferences stay on the device. Built with Next.js 16 · React 19 · TypeScript · Tailwind CSS · Leaflet · Vitest." />
 </picture>
 
 <a href="https://aero-weather-nightservants-projects.vercel.app/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-3b82f6?style=flat-square" alt="AeroWeather live demo" /></a> <a href="https://github.com/NightServant/aero_weather"><img src="https://img.shields.io/badge/Source-6366f1?style=flat-square&logo=github&logoColor=white" alt="AeroWeather source code" /></a>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Smart-HRMS-mobile.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Smart-HRMS.svg" width="100%" alt="Smart HRMS (Live). An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron. Built with Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest." />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Smart-HRMS-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Smart-HRMS-light.svg" width="100%" alt="Smart HRMS (Live). An HR platform with role-based access for employees, evaluators, HR, and PMT officers, backed by four Python modules: rule-based leave and IPCR routing, a linear-regression performance predictor, a real-time attendance analytics dashboard, and a training recommender. Ships as a desktop app through Electron. Built with Laravel 12 · React 19 · Inertia.js · MySQL · Python · Electron · Pest." />
 </picture>
 
 <a href="https://smart-hrms.onrender.com/"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-3f6f33?style=flat-square" alt="Smart HRMS live demo" /></a> <a href="https://github.com/NightServant/Smart-HRMS"><img src="https://img.shields.io/badge/Source-0e1b3a?style=flat-square&logo=github&logoColor=white" alt="Smart HRMS source code" /></a>
