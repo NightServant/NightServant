@@ -1,5 +1,5 @@
 {
-  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), 'palette' ({badge: [primary, secondary] for the link badges, light: {...}, dark: {...}} where each theme has surface/border/text/muted/accent taken from the app's own light and dark CSS tokens; text and muted are nudged to WCAG AA if needed; unset = neutral gray), or 'fonts' ({title, body, stack} as 'Google Font Family:weight'; stack defaults to body; unset = system font). Repos listed in 'hidden' never appear.",
+  "_comment": "Optional per-repo overrides for the README's Featured projects section. Any public repo pushed in the last year appears automatically; entries here only improve its title, blurb, stack line, live demo URL ('homepage'), 'palette' ({badge: [primary, secondary] for the link badges, auto-fitted to a mid-tone readable on both GitHub themes, light: {...}, dark: {...}} where each theme has surface/border/text/muted/accent taken from the app's own light and dark CSS tokens; text and muted are nudged to WCAG AA if needed; unset = neutral gray), or 'fonts' ({title, body, stack} as 'Google Font Family:weight'; stack defaults to body; unset = system font). Repos listed in 'hidden' never appear.",
   "hidden": [],
   "projects": {
     "Worktrack": {
@@ -8,7 +8,7 @@
       "palette": {
         "badge": [
           "#c2410c",
-          "#1e293b"
+          "#64748b"
         ],
         "light": {
           "surface": "#ffffff",
@@ -38,7 +38,7 @@
       "palette": {
         "badge": [
           "#3f6f33",
-          "#0e1b3a"
+          "#5a7256"
         ],
         "light": {
           "surface": "#e3efda",
@@ -67,7 +67,7 @@
       "palette": {
         "badge": [
           "#8c2318",
-          "#2b221c"
+          "#635d54"
         ],
         "light": {
           "surface": "#f5f0e6",
@@ -97,7 +97,7 @@
       "palette": {
         "badge": [
           "#008137",
-          "#080a09"
+          "#4c574f"
         ],
         "light": {
           "surface": "#f6f8f6",

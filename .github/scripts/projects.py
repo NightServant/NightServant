@@ -120,15 +120,33 @@ def ink_on(hex_color):
     return "#ffffff" if contrast("#ffffff", hex_color) >= contrast("#0a0a0a", hex_color) else "#0a0a0a"
 
 
+def mix(color, target, t):
+    a, b = [int(color[i:i + 2], 16) for i in (1, 3, 5)], [int(target[i:i + 2], 16) for i in (1, 3, 5)]
+    return "#" + "".join(f"{round(x + (y - x) * t):02x}" for x, y in zip(a, b))
+
+
 def ensure(fg, bg, ratio):
     """Nudge an app token toward black/white just enough to reach `ratio` on bg (WCAG AA guard)."""
     target = ink_on(bg)
-    rgb, goal = [int(fg[i:i + 2], 16) for i in (1, 3, 5)], [int(target[i:i + 2], 16) for i in (1, 3, 5)]
     for step in range(21):
-        mixed = "#" + "".join(f"{round(c + (g - c) * step / 20):02x}" for c, g in zip(rgb, goal))
-        if contrast(mixed, bg) >= ratio:
+        if contrast(mixed := mix(fg, target, step / 20), bg) >= ratio:
             return mixed
     return target
+
+
+PAGE_DARK = "#0d1117"  # GitHub's dark-mode page background
+
+
+def fit_badge(color):
+    """Link badges can't switch with GitHub's theme (GitHub breaks a <picture> inside a link), so move the
+    color the least distance to a mid-tone that keeps white text >= 4.5:1 and the badge >= 3:1 against the
+    dark page (it is then >= 4.5:1 against the white page too)."""
+    target = "#000000" if contrast("#ffffff", color) < 4.5 else "#ffffff"
+    for step in range(41):
+        m = mix(color, target, step / 40)
+        if contrast("#ffffff", m) >= 4.5 and contrast(m, PAGE_DARK) >= 3:
+            return m
+    return "#6b6b6b"
 
 
 def theme_colors(t):
@@ -259,8 +277,8 @@ def render(repos, overrides, now, login):
         alt = escape(f"{title} ({status}). {plain(blurb)} Built with {stack}.".replace("  ", " "), {'"': "&quot;"})
         links = []
         if r["homepageUrl"]:
-            links.append(f'<a href="{r["homepageUrl"]}"><img src="{badge("Live demo ↗", pal["badge"][0])}" alt="{title} live demo" /></a>')
-        links.append(f'<a href="{r["url"]}"><img src="{badge("Source", pal["badge"][1], "github")}" alt="{title} source code" /></a>')
+            links.append(f'<a href="{r["homepageUrl"]}"><img src="{badge("Live demo ↗", fit_badge(pal["badge"][0]))}" alt="{title} live demo" /></a>')
+        links.append(f'<a href="{r["url"]}"><img src="{badge("Source", fit_badge(pal["badge"][1]), "github")}" alt="{title} source code" /></a>')
         # A bare <picture> block: GitHub's sanitizer breaks a <picture> nested in a link, so the badges carry the links.
         # Width source first and theme-free (GitHub rewrites any media query naming prefers-color-scheme).
         blocks.append(f'''<picture>
@@ -294,11 +312,11 @@ def check():
     assert statuses({**base, "latestRelease": {"tagName": "v1.0"}, "isArchived": True}, now) == ["Released v1.0", "Completed"]
     old = {**base, "name": "old", "pushedAt": "2025-06-01T00:00:00Z"}
     assert [r["name"] for r in select([base, old, {**base, "name": "me"}], "me", [], now)] == ["x"]
-    pal = {"badge": ["#c2410c", "#1e293b"],
+    pal = {"badge": ["#c2410c", "#64748b"],
            "light": {"surface": "#ffffff", "border": "#e2e8f0", "text": "#020817", "muted": "#a0a0a0", "accent": "#c2410c"},
            "dark": {"surface": "#020817", "border": "#1e293b", "text": "#f8fafc", "muted": "#94a3b8", "accent": "#fb923c"}}
     shown, files = render([{**base, "description": "Uses [A&B](https://l) <fast>"}], {"x": {"homepage": "https://h.dev", "palette": pal}}, now, "me")
-    assert '<a href="https://h.dev">' in shown and "Live%20demo%20%E2%86%97-c2410c" in shown and "Source-1e293b" in shown
+    assert '<a href="https://h.dev">' in shown and "Live%20demo%20%E2%86%97-c2410c" in shown and "Source-64748b" in shown
     assert all(f"assets/projects/x-{v}.svg" in shown for v in ("light", "dark", "mobile"))
     import xml.dom.minidom
     for svg in files.values():
@@ -310,6 +328,10 @@ def check():
     assert contrast(theme_colors(pal["light"])["muted"], "#ffffff") >= 4.5     # #a0a0a0 (2.6:1) nudged up to AA
     assert ensure("#000000", "#ffffff", 7) == "#000000"                         # already passing: untouched
     assert ".bg{fill:#141414" in render([base], {}, now, "me")[1]["assets/projects/x-dark.svg"]  # no palette -> neutral
+    for c in ("#1e293b", "#080a09", "#3b82f6", "#c2410c", "#ffffff", "#404040"):     # every badge color fits
+        f = fit_badge(c)
+        assert contrast("#ffffff", f) >= 4.5 and contrast(f, PAGE_DARK) >= 3, (c, f)
+    assert fit_badge("#c2410c") == "#c2410c"                                    # already fine: untouched
     assert ink_on("#91c383") == "#0a0a0a" and ink_on("#c2410c") == "#ffffff"
     long = Font(None, "")
     assert all(long.width(l, 15) <= 300 for l in long.wrap("word " * 80, 15, 300))  # wrapping respects width
