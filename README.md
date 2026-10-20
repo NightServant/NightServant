@@ -47,10 +47,10 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-dark.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-light.svg" width="100%" alt="Baguio 3D (In development). An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys. Built with Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis." />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/baguio-city-3d-light.svg" width="100%" alt="Baguio 3D (Live). An interactive 3D map and field guide to Baguio City: real-elevation terrain, six jeepney routes with a fare calculator, a four-era history timeline, and an eat-and-stay directory. Geospatial data lives in PostGIS and is served through Next.js route handlers with Redis caching, with no paid map keys. Built with Next.js · TypeScript · MapLibre GL · PostgreSQL / PostGIS · Prisma · Redis." />
 </picture>
 
-<a href="https://github.com/NightServant/baguio-city-3d"><img src="https://img.shields.io/badge/Source-676158?style=flat-square&logo=github&logoColor=white" alt="Baguio 3D source code" /></a>
+<a href="https://baguio-city-3d.vercel.app"><img src="https://img.shields.io/badge/Live%20demo%20%E2%86%97-a04a40?style=flat-square" alt="Baguio 3D live demo" /></a> <a href="https://github.com/NightServant/baguio-city-3d"><img src="https://img.shields.io/badge/Source-676158?style=flat-square&logo=github&logoColor=white" alt="Baguio 3D source code" /></a>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/aero_weather-mobile.svg" />
