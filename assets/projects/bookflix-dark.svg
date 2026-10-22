@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="167" viewBox="0 0 840 167" role="img" aria-label="bookflix">
+<title>bookflix</title>
+<style>.bg{fill:#141414;stroke:#2e2e2e}.tx{fill:#fafafa}.mu{fill:#a3a3a3}.ac{fill:#d4d4d4}.pt{fill:#0a0a0a}.ln{stroke:#2e2e2e}</style>
+<rect class="bg" x="0.75" y="0.75" width="838.5" height="165.5" rx="14" stroke-width="1.5"/>
+<text class="tx" x="32" y="56" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="700">bookflix</text>
+<rect class="ac" x="652" y="37" width="156" height="22" rx="11"/><text class="pt" x="730.0" y="52" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">New · In development</text>
+<text class="tx" x="32" y="93" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15">Bookflix: unified story library and personalized discovery platform (Laravel + Livewire)</text>
+<line class="ln" x1="32" y1="113" x2="808" y2="113"/>
+<text class="mu" x="32" y="135" font-family="Geist, Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">Blade</text>
+</svg>

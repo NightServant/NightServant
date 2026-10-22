@@ -29,6 +29,14 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
 
 <!-- PROJECTS:START -->
 <picture>
+  <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-mobile.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-dark.svg" />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-light.svg" width="100%" alt="bookflix (New · In development). Bookflix: unified story library and personalized discovery platform (Laravel + Livewire) Built with Blade." />
+</picture>
+
+<a href="https://github.com/NightServant/bookflix"><img src="https://img.shields.io/badge/Source-616161?style=flat-square&logo=github&logoColor=white" alt="bookflix source code" /></a>
+
+<picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack-dark.svg" />
   <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/Worktrack-light.svg" width="100%" alt="Worktrack (Live). A job-search tracker with an application pipeline, analytics, and a CV builder that keeps every version. Row-level security scopes every table to the signed-in user, and a demo mode shows the real screens over sample data without an account. Continues a project started by Ensues. Built with Next.js 15 · React 19 · Supabase Postgres · TanStack Query · Tiptap · Vitest." />
