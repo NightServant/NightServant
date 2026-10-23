@@ -31,7 +31,7 @@ Open to internships, freelance work, open-source collaboration, and frontend or 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-dark.svg" />
-  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-light.svg" width="100%" alt="bookflix (New · In development). Bookflix: unified story library and personalized discovery platform (Laravel + Livewire) Built with Blade." />
+  <img src="https://raw.githubusercontent.com/NightServant/NightServant/main/assets/projects/bookflix-light.svg" width="100%" alt="bookflix (New · In development). Bookflix: unified story library and personalized discovery platform (Laravel + Livewire) Built with PHP." />
 </picture>
 
 <a href="https://github.com/NightServant/bookflix"><img src="https://img.shields.io/badge/Source-616161?style=flat-square&logo=github&logoColor=white" alt="bookflix source code" /></a>
