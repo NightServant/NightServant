@@ -5,7 +5,7 @@
 <g data-od-id="repo-header">
 <text x="16.0" y="36.0" font-size="18" font-weight="600" fill="#0a0a0a" text-anchor="start" >@NightServant</text>
 <text x="16.0" y="58.0" font-size="13" font-weight="400" fill="#525252" text-anchor="start" >12 public repos · 11 followers · 20 following</text>
-<text x="16.0" y="77.0" font-size="13" font-weight="400" fill="#525252" text-anchor="start" >Updated Nov 21, 2026</text>
+<text x="16.0" y="77.0" font-size="13" font-weight="400" fill="#525252" text-anchor="start" >Updated Nov 22, 2026</text>
 </g>
 <g data-od-id="kpi-strip">
 <rect x="16.0" y="96.0" width="178.0" height="92" rx="12" fill="#ffffff" stroke="#e5e5e5"/>
@@ -41,14 +41,14 @@
 <rect x="66.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="73.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="79.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="85.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="91.7" y="569.2" width="4.2" height="4.8" rx="1.5" fill="#0a0a0a"/>
+<rect x="85.5" y="569.2" width="4.2" height="4.8" rx="1.5" fill="#0a0a0a"/>
+<rect x="91.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="97.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="104.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="110.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="116.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="122.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="128.8" y="566.3" width="4.2" height="7.7" rx="1.5" fill="#0a0a0a"/>
+<rect x="122.6" y="566.3" width="4.2" height="7.7" rx="1.5" fill="#0a0a0a"/>
+<rect x="128.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="135.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="141.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="147.4" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
@@ -57,8 +57,8 @@
 <rect x="166.0" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="172.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="178.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="184.5" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="190.7" y="563.4" width="4.2" height="10.6" rx="1.5" fill="#0a0a0a"/>
+<rect x="184.5" y="563.4" width="4.2" height="10.6" rx="1.5" fill="#0a0a0a"/>
+<rect x="190.7" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="196.9" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="203.1" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="209.3" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
@@ -69,23 +69,23 @@
 <rect x="240.2" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="246.4" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <rect x="252.6" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="258.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
-<rect x="265.0" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#0a0a0a"/>
-<rect x="271.2" y="492.9" width="4.2" height="81.1" rx="1.5" fill="#0a0a0a"/>
-<rect x="277.4" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#0a0a0a"/>
-<rect x="283.5" y="543.1" width="4.2" height="30.9" rx="1.5" fill="#0a0a0a"/>
-<rect x="289.7" y="480.4" width="4.2" height="93.6" rx="1.5" fill="#0a0a0a"/>
-<rect x="295.9" y="507.4" width="4.2" height="66.6" rx="1.5" fill="#0a0a0a"/>
-<rect x="302.1" y="464.0" width="4.2" height="110.0" rx="1.5" fill="#0a0a0a"/>
-<rect x="308.3" y="476.5" width="4.2" height="97.5" rx="1.5" fill="#0a0a0a"/>
-<rect x="314.5" y="517.1" width="4.2" height="56.9" rx="1.5" fill="#0a0a0a"/>
-<rect x="320.7" y="537.3" width="4.2" height="36.7" rx="1.5" fill="#0a0a0a"/>
-<rect x="326.9" y="514.2" width="4.2" height="59.8" rx="1.5" fill="#0a0a0a"/>
-<rect x="333.1" y="510.3" width="4.2" height="63.7" rx="1.5" fill="#0a0a0a"/>
-<rect x="339.2" y="549.9" width="4.2" height="24.1" rx="1.5" fill="#0a0a0a"/>
+<rect x="258.8" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#0a0a0a"/>
+<rect x="265.0" y="492.9" width="4.2" height="81.1" rx="1.5" fill="#0a0a0a"/>
+<rect x="271.2" y="553.7" width="4.2" height="20.3" rx="1.5" fill="#0a0a0a"/>
+<rect x="277.4" y="543.1" width="4.2" height="30.9" rx="1.5" fill="#0a0a0a"/>
+<rect x="283.5" y="480.4" width="4.2" height="93.6" rx="1.5" fill="#0a0a0a"/>
+<rect x="289.7" y="507.4" width="4.2" height="66.6" rx="1.5" fill="#0a0a0a"/>
+<rect x="295.9" y="464.0" width="4.2" height="110.0" rx="1.5" fill="#0a0a0a"/>
+<rect x="302.1" y="476.5" width="4.2" height="97.5" rx="1.5" fill="#0a0a0a"/>
+<rect x="308.3" y="517.1" width="4.2" height="56.9" rx="1.5" fill="#0a0a0a"/>
+<rect x="314.5" y="537.3" width="4.2" height="36.7" rx="1.5" fill="#0a0a0a"/>
+<rect x="320.7" y="514.2" width="4.2" height="59.8" rx="1.5" fill="#0a0a0a"/>
+<rect x="326.9" y="510.3" width="4.2" height="63.7" rx="1.5" fill="#0a0a0a"/>
+<rect x="333.1" y="549.9" width="4.2" height="24.1" rx="1.5" fill="#0a0a0a"/>
+<rect x="339.2" y="560.5" width="4.2" height="13.5" rx="1.5" fill="#0a0a0a"/>
 <rect x="345.4" y="560.5" width="4.2" height="13.5" rx="1.5" fill="#0a0a0a"/>
-<rect x="351.6" y="560.5" width="4.2" height="13.5" rx="1.5" fill="#0a0a0a"/>
-<rect x="357.8" y="568.2" width="4.2" height="5.8" rx="1.5" fill="#0a0a0a"/>
+<rect x="351.6" y="568.2" width="4.2" height="5.8" rx="1.5" fill="#0a0a0a"/>
+<rect x="357.8" y="572.0" width="4.2" height="2.0" rx="1.5" fill="#e5e5e5"/>
 <text x="36.0" y="596.0" font-size="11" font-weight="400" fill="#8a8a8a" text-anchor="start" >Nov 2025</text>
 <text x="364.0" y="596.0" font-size="11" font-weight="400" fill="#8a8a8a" text-anchor="end" >Nov 2026</text>
 <text x="200.0" y="596.0" font-size="11" font-weight="400" fill="#8a8a8a" text-anchor="middle" >peak 114 / week</text>
@@ -178,5 +178,5 @@
 <text x="364.0" y="1318.0" font-size="12" font-weight="400" fill="#525252" text-anchor="end" >82</text>
 </g>
 <text x="16.0" y="1370.0" font-size="11" font-weight="400" fill="#8a8a8a" text-anchor="start" data-od-id="provenance">Source: GitHub GraphQL API · public data only</text>
-<text x="16.0" y="1386.0" font-size="11" font-weight="400" fill="#8a8a8a" text-anchor="start" data-od-id="provenance">generated 2026-11-21 11:05 UTC · dashboard.yml</text>
+<text x="16.0" y="1386.0" font-size="11" font-weight="400" fill="#8a8a8a" text-anchor="start" data-od-id="provenance">generated 2026-11-22 11:28 UTC · dashboard.yml</text>
 </svg>
